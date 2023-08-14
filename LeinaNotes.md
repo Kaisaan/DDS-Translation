@@ -206,9 +206,6 @@ Other code run
         ld hl, $0000
         ld ($D000), hl
         ld ($D002), hl
-```
-
-```
 ; Before the write to $d71c from $d7b4/$d7b5
         ld a, $0E
         ld ($A000), a
@@ -293,9 +290,6 @@ _LABEL_4CEC_:
         ld bc, $0000
         ld ($D473), bc
         ld ($D474), bc
-```
-
-```
 ; After the writes to $d71c
         call _LABEL_11F_
         ld hl, _DATA_1A1D9_
