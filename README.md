@@ -8,7 +8,14 @@ Have [wla-dx](https://github.com/vhelin/wla-dx) installed and have the game's RO
 
 # Contributing
 If you want to help with translation, we have a [Spreadsheet](https://docs.google.com/spreadsheets/d/1oDYWFWq-gdgdt5zBz0KaMGqM_4g3SZWNQ_7SA0C65jQ/edit?usp=sharing) for all the lines. 
-<br>Please request for access on the Google Sheets page, or message me on Discord (kaisaan) for access.
+<br>Please request for access on the Google Sheets page, or message me for access.
+
+# Testing
+Getting to the text in the game is very tedious as they're few and far between. I'm going to need help with accessing the text, collecting passwords, and documenting maps. Please contact me if you want to help with testing.
+
+# How it Works
+The game loads the character graphics from the BIOS of the MSX. English letters are always going to be included of the BIOS regardless of the region, so I'm just able to change the value in the text data.  
+Because the English text is going to be larger than the space allotted for the original Japanese text, I expanded the ROM from 128kb to 256kb and just changed the included mapper's pages as needed.
 
 # Maps
 Thanks to [leina](https://github.com/leinacc), the data for the maps have been extracted. I wrote a converter to change the .txt data into .bmp files.
@@ -19,6 +26,9 @@ The one thing to make testing overall easier is figuring out the game's password
 
 # Manual
 I am also interested in getting the manual translated. The best scan of the manual I could find is on [necretro.org](https://retrocdn.net/images/c/ca/Digital_Devil_Story_Megami_Tensei_PC88_Manual.pdf).
+
+# Contact
+You can contact me on Discord with the username `kaisaan` or you can join the [Classic Persona Modding](https://discord.gg/ahg9gegCcm) to see updates on this project in the [`#msx-megaten-telenet-translation`](https://discord.com/channels/934828922032504852/1137420237428494336) channel.
 
 # Credits
 Gabriulio - Translation<br>
