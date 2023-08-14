@@ -17,19 +17,6 @@ The image files are flipped vertically and are missing data such as chests, stai
 # Passwords
 The one thing to make testing overall easier is figuring out the game's password system. Leina and I have already put in a lot of work in figuring out how it works, but I still have not fully reversed-engineered it.
 
-# Useful RAM Values
-`$D271` is Nakajima's current HP 
-`$D272` is Nakajima's current level
-
-`$D6AE` is the current area number
-`$D6AF` is the current floor number
-
-`$D000` is the current position of the password cursor
-`$D001` is the current Y position of the password arrow
-`$D002` is the current X position of the password arrow
-
-`$D7A8` through `$D7B7` are the character values (According to DDSMT.tbl) of the inputted characters
-
 # Credits
 Gabriulio - Translation
 Leiana - Lots of hacking
