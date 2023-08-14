@@ -27,10 +27,11 @@ The only difference between the ROMs is that they use different mappers. So the 
 **This translation uses the original, ASCII8 ROM for patching.**
 
 # Text Printing Routine
-Label 5080 is the text printing routine
-It loads text data from address stored in hl
-Prints text based on what's stored in de (XXYY Where XX is X position in pixels and YY is line number)
-Text colour (X) and highlight (Y) based on what's loaded in b
+Label `$5080` is the text printing routine  
+It loads text data from address stored in `hl`  
+Prints text location based on what's stored in `de` (XXYY Where XX is X position in pixels and YY is line number)
+Text colour (X) and highlight (Y) based on what's loaded in `b`
+
 |X or Y value|Colour|Colour Code|
 | --- | --- | --- |
 |0|Blank|#000000|	
@@ -52,3 +53,5 @@ Text colour (X) and highlight (Y) based on what's loaded in b
 
 One line can hold 32 characters  
 Automatically wraps but no line break  
+Characters for the text are loaded from [the BIOS](https://www.msx.org/wiki/MSX_font) based on their hex value  
+Stops printing text until it sees the `$FF` character
