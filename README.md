@@ -17,6 +17,9 @@ Thanks to [leina](https://github.com/leinacc), the data for the maps have been e
 # Passwords
 The one thing to make testing overall easier is figuring out the game's password system. Leina and I have already put in a lot of work in figuring out how it works, but I still have not fully reversed-engineered it.
 
+# Manual
+I am also interested in getting the manual translated. The best scan of the manual I could find is on [necretro.org](https://retrocdn.net/images/c/ca/Digital_Devil_Story_Megami_Tensei_PC88_Manual.pdf).
+
 # Credits
 Gabriulio - Translation<br>
 Leiana - Lots of hacking<br>
