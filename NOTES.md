@@ -1,15 +1,15 @@
 # Useful RAM Values
-`$D271` is Nakajima's current HP 
-`$D272` is Nakajima's current level
-
-`$D6AE` is the current area number
-`$D6AF` is the current floor number
-
-`$D000` is the current position of the password cursor
-`$D001` is the current Y position of the password arrow
-`$D002` is the current X position of the password arrow
-
-`$D7A8` through `$D7B7` are the character values (According to DDSMT.tbl) of the inputted characters
+`$D271` is Nakajima's current HP<br>
+`$D272` is Nakajima's current level<br>
+<br>
+`$D6AE` is the current area number<br>
+`$D6AF` is the current floor number<br>
+<br>
+`$D000` is the current position of the password cursor<br>
+`$D001` is the current Y position of the password arrow<br>
+`$D002` is the current X position of the password arrow<br>
+<br>
+`$D7A8` through `$D7B7` are the character values (According to DDSMT.tbl) of the inputted characters<br>
 
 # ROM differences
 There are two common dumps of this game that are recognized by most MSX emulators.
