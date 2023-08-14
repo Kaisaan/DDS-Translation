@@ -1,5 +1,5 @@
 # DDS-Translation
-Stuff for translating and further demystifying Digital Devil Story - Reincarnation of the Goddess by Telenet.
+Stuff for translating and further demystifying *Digital Devil Story - Reincarnation of the Goddess* by Telenet.
 <br>I have a page about the game and its other versions on [my website](https://kaisaan.github.io/pages/dss.html) but it's still a work in progress.
 
 # Building
@@ -22,7 +22,7 @@ I am also interested in getting the manual translated. The best scan of the manu
 
 # Credits
 Gabriulio - Translation<br>
-Leiana - Lots of hacking<br>
+Leina - Lots of hacking<br>
 Calindro - Hacking<br>
 abridgewater - Hacking and Japanese advice<br>
 YasaSheep - Japanese<br>
