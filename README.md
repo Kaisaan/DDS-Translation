@@ -1,6 +1,6 @@
 # DDS-Translation
 Stuff for translating and further demystifying *Digital Devil Story - Reincarnation of the Goddess* by Telenet.
-<br>I have a page about the game and its other versions on [my website](https://kaisaan.github.io/pages/dss.html) but it's still a work in progress.
+<br>I have a page about the game and its other versions on [my website](https://kaisaan.github.io/pages/dds.html) but it's still a work in progress.
 
 # Building
 Have [wla-dx](https://github.com/vhelin/wla-dx) installed and have the game's ROM as `Digital Devil Story.rom`. Then run `make` and it will result in the new `DDSE.rom` file.
