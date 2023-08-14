@@ -107,15 +107,11 @@ Once all 16 characters are inputted, the password is checked at `_LABEL_499F_`, 
         ret
 ```
 
-
 You can try to follow along what's in `_LABEL_4AC9_`, especially if you have known ram locations that the password might set, but I'm assuming the bits clear in $8d9c are the relevant flags used to load user data
-
 
 so after all the transformations, given the masks, the relevant bits in the 15 characters are `$37 $37 $37 $37 $1f $1f $1f $27 $1f $27 $1f $1f $1f $0f $1f`
 
-
-
-here's the specifics, but of course, 4AC9 does a few more things, which I'll paste after
+Here's the specifics, but of course, 4AC9 does a few more things, which I'll paste after
 
 where ix = $d277
 $d7a8 - $37
