@@ -1,0 +1,1 @@
+for %%F in ("*.txt") do ("convert" "%%F")
