@@ -2,6 +2,10 @@
 Stuff for translating and further demystifying *Digital Devil Story - Reincarnation of the Goddess* by Telenet.
 <br>I have a page about the game and its other versions on [my website](https://kaisaan.github.io/pages/dds.html) but it's still a work in progress.
 
+# How it Works
+The game loads the character graphics from the BIOS of the MSX. English letters are always going to be included of the BIOS regardless of the region, so I'm just able to change the value in the text data.  
+Because the English text is going to be larger than the space allotted for the original Japanese text, I expanded the ROM from 128kb to 256kb and just changed the included mapper's pages as needed.
+
 # Building
 Have [wla-dx](https://github.com/vhelin/wla-dx) installed and have the game's ROM as `Digital Devil Story.rom`. Then run `make` and it will result in the new `DDSE.rom` file.
 <br>Make sure your ROM has a CRC-32 of `25FC11FA` otherwise loading the text may fail.
@@ -12,10 +16,6 @@ If you want to help with translation, we have a [Spreadsheet](https://docs.googl
 
 # Testing
 Getting to the text in the game is very tedious as they're few and far between. I'm going to need help with accessing the text, collecting passwords, and documenting maps. Please contact me if you want to help with testing.
-
-# How it Works
-The game loads the character graphics from the BIOS of the MSX. English letters are always going to be included of the BIOS regardless of the region, so I'm just able to change the value in the text data.  
-Because the English text is going to be larger than the space allotted for the original Japanese text, I expanded the ROM from 128kb to 256kb and just changed the included mapper's pages as needed.
 
 # Maps
 Thanks to [leina](https://github.com/leinacc), the data for the maps have been extracted. I wrote a converter to change the .txt data into .bmp files.
