@@ -6,6 +6,14 @@ Stuff for translating and further demystifying *Digital Devil Story - Reincarnat
 The game loads the character graphics from the BIOS of the MSX. English letters are always going to be included of the BIOS regardless of the region, so I'm just able to change the value in the text data.  
 Because the English text is going to be larger than the space allotted for the original Japanese text, I expanded the ROM from 128kb to 256kb and just changed the included mapper's pages as needed.
 
+# Progress
+|Task|Progress|
+| --- | --- |
+|Lines Inserted|2|
+|Lines Translated|???|
+|Maps Made|8/160|
+|Manual Translated|0%|
+
 # Building
 Have [wla-dx](https://github.com/vhelin/wla-dx) installed and have the game's ROM as `Digital Devil Story.rom`. Then run `make` and it will result in the new `DDSE.rom` file.
 <br>Make sure your ROM has a CRC-32 of `25FC11FA` otherwise loading the text may fail.
