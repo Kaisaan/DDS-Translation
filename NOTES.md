@@ -35,3 +35,8 @@ One line can hold 32 characters
 Automatically wraps but no line break  
 Characters for the text are loaded from [the BIOS](https://www.msx.org/wiki/MSX_font) based on their hex value  
 Stops printing text until it sees the `$FF` character
+
+# Pointer Table Text
+Some text will use a pointer table to load its text into `hl`  
+It will also used the fixed value of `de = $10F0` but will call `$59CC`  
+The routine at `$59CC` uses the character value `$FE` as a newline and also centers the text

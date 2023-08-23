@@ -4,12 +4,12 @@ Stuff for translating and further demystifying *Digital Devil Story - Reincarnat
 
 # How it Works
 The game loads the character graphics from the BIOS of the MSX. English letters are always going to be included of the BIOS regardless of the region, so I'm just able to change the value in the text data.  
-Because the English text is going to be larger than the space allotted for the original Japanese text, I expanded the ROM from 128kb to 256kb and just changed the included mapper's pages as needed.
+Because the English text is going to be larger than the space allotted for the original Japanese text, I expanded the ROM from 128kb to 256kb and just change banks as needed.
 
 # Progress
 |Task|Progress|
 | --- | --- |
-|Lines Inserted|2|
+|Lines Inserted|4|
 |Lines Translated|???|
 |Maps Made|8/160|
 |Manual Translated|0%|
@@ -40,10 +40,10 @@ You can contact me on Discord with the username `kaisaan` or you can join the [C
 
 # Credits
 Gabriulio - Translation<br>
-Leina - Lots of hacking<br>
-Calindro - Hacking<br>
-abridgewater - Hacking and Japanese advice<br>
-YasaSheep - Japanese<br>
+Leina - Hacking help<br>
+Calindro - Hacking and Debugging help<br>
+abridgewater - Hacking and Japanese help<br>
+YasaSheep - Japanese help<br>
 Zarby89 - Extra table file help<br>
 Sugunii - Special Thanks<br>
 <br>
