@@ -29,28 +29,8 @@ The only difference between the ROMs is that they use different mappers. So the 
 # Text Printing Routine
 Label `$5080` is the text printing routine  
 It loads text data from address stored in `hl`  
-Prints text location based on what's stored in `de` (XXYY Where XX is X position in pixels and YY is line number)
-Text colour (X) and highlight (Y) based on what's loaded in `b`
-
-|X or Y value|Colour|Colour Code|
-| --- | --- | --- |
-|0|Blank|#000000|	
-|1|Black|#000000|
-|2|Green|#1ccb42|
-|3|Light Green|#5edc78|
-|4|Purple|#5554ed|
-|5|Light Purple|#7d75fc|
-|6|Red|#d2534d|
-|7|Cyan|#43ebf6|
-|8|Light Red|#fd5554|
-|9|Lighter Red|#ff7978|
-|A|Yellow|#d3c155|
-|B|Light Yellow|#e5ce80|
-|C|Green|#21b03e|
-|D|Purple|#c95bba|
-|E|Grey|#cfcbca|
-|F|White|#ffffff|
-
+Prints text location based on what's stored in `de` (YYXX Where XX is X position in pixels and YY is line number)  
+Text colour (X) and highlight (Y) based on what's loaded in `b` based on the [MSX colour palette](https://paulwratt.github.io/programmers-palettes/HW-MSX/HW-MSX-palettes.html)
 One line can hold 32 characters  
 Automatically wraps but no line break  
 Characters for the text are loaded from [the BIOS](https://www.msx.org/wiki/MSX_font) based on their hex value  
