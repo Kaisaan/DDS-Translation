@@ -1,6 +1,7 @@
 # DDS-Translation
 Stuff for translating and further demystifying *Digital Devil Story - Reincarnation of the Goddess* by Telenet.
 <br>I have a page about the game and its other versions on [my website](https://kaisaan.github.io/pages/dds.html) but it's still a work in progress.
+<br>Another, much more detailed, place to learn more about the game is [this reddit post](https://old.reddit.com/r/Megaten/comments/15zdfwp/digital_devil_story_megami_tensei_telenet_version/) by Natreg.
 
 # How it Works
 The game loads the character graphics from the BIOS of the MSX. English letters are always going to be included of the BIOS regardless of the region, so I'm just able to change the value in the text data.  
@@ -11,7 +12,6 @@ Because the English text is going to be larger than the space allotted for the o
 | --- | --- |
 |Lines Inserted|4|
 |Lines Translated|???|
-|Maps Made|8/160|
 |Manual Translated|0%|
 
 # Building
@@ -26,8 +26,7 @@ If you want to help with translation, we have a [Spreadsheet](https://docs.googl
 Getting to the text in the game is very tedious as they're few and far between. I'm going to need help with accessing the text, collecting passwords, and documenting maps. Please contact me if you want to help with testing.
 
 # Maps
-Thanks to [leina](https://github.com/leinacc), the data for the maps have been extracted. I wrote a converter to change the .txt data into .bmp files.
-<br>The image files are flipped vertically and are missing data such as chests, stairs, and enemy data. I have an example .psd file in the maps folder to show what I would want the final .png file for a map to look like.
+[DDSLibrary](http://ddslib.html.xdomain.jp/game/pc8801/01.html) Has maps for all the levels. While the site doesn't specifically have maps for the MSX release. I assume the content is the same.
 
 # Passwords
 The one thing to make testing overall easier is figuring out the game's password system. Leina and I have already put in a lot of work in figuring out how it works, but I still have not fully reversed-engineered it.
