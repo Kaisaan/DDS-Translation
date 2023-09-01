@@ -111,7 +111,7 @@ CENTERTEXT:
 .org $151B
 .section "Text Pointer table rewrite" overwrite
 
-	.dw Izanami1, Izanami2
+	.dw Izanami1, Izanami2, Izanami3, Izanami4, Izanami5, Izanami6
 
 .ends
 
@@ -157,6 +157,48 @@ Izanami2:
 	text "there's no going\\n"
 	text "back.\END"
 	
+.ends
+
+.section "Izanami 3 text" overwrite
+
+Izanami3:
+
+	text "When the moon\\n"
+	text "is full, demons\\n"
+	text "start moving\END"
+
+.ends
+
+.section "Izanami 4 text" overwrite
+
+Izanami4:
+
+	text "Those obssessed with\\n"
+	text "money eat away\\n"
+	text "at the poor.\END"
+
+.ends
+
+.section "Izanami 5 text" overwrite
+
+Izanami5:
+
+	text "The good and\\n"
+	text "the evil of\\n"
+	text "the demon world\\n"
+	text "is kept in balance\\n"
+	text "by the dark world."
+	
+.ends
+
+.section "Izanami 6 text" overwrite
+	
+Izanami6
+
+	text "Treat Cerberus well.\\n"
+	text "It has sworn eternal\\n"
+	text "loyalty to you."
+
 .ends
 
 .bank 16
