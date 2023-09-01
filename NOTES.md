@@ -1,4 +1,8 @@
 # Useful RAM Values
+`$D000` is the current position of the password cursor<br>
+`$D001` is the current Y position of the password arrow<br>
+`$D002` is the current X position of the password arrow<br>
+<br>
 `$D271` is Nakajima's current HP<br>
 `$D272` is Nakajima's current level<br>
 <br>
@@ -7,9 +11,7 @@
 <br>
 `$D6BB` is the amount of Macca<br>
 <br>
-`$D000` is the current position of the password cursor<br>
-`$D001` is the current Y position of the password arrow<br>
-`$D002` is the current X position of the password arrow<br>
+`$D71C` is Nakajima's INT stat<br>
 <br>
 `$D7A8` through `$D7B7` are the character values (According to DDSMT.tbl) of the inputted characters<br>
 
@@ -42,3 +44,8 @@ Stops printing text until it sees the `$FF` character
 Some text will use a pointer table to load its text into `hl`  
 It will also used the fixed value of `de = $10F0` but will call `$59CC`  
 The routine at `$59CC` uses the character value `$FE` as a newline and also centers the text
+
+# Izanami Text
+Visiting a new Izanami shrine displays a text message. After exiting Nakajima's INT stat increases by 1  
+Izanami has a new message for each level of INT  
+In the original game, the pointer table for Izanami's messages are at `$1B51B` and are indexed by the value of `$D71C` (Nakajima's current INT)  
