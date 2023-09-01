@@ -39,16 +39,19 @@ You can contact me on Discord with the username `kaisaan` or you can join the [C
 
 # Credits
 Gabriulio - Translation<br>
-Leina - Hacking help<br>
-Calindro - Hacking and Debugging help<br>
+Leina - Lots of Hacking help<br>
+Calindro - Hacking and Debugging help, also creator of Emulicious<br>
 abridgewater - Hacking and Japanese help<br>
 YasaSheep - Japanese help<br>
 Zarby89 - Extra table file help<br>
 Sugunii - Special Thanks<br>
 <br>
+Supporters: comrade_hee_ho, seatsafteyswitch, eiowlta, quantumdog, reachforthemoon, naoyatoudou, Scone#6977, amazingcretin, alison1337, liamcarney, theoomslayer, boimses, hiking., xzippyzachx
+<br>
 [Classic Persona Modding](https://discord.gg/ahg9gegCcm) - Where I'm able to post progress<br>
 [Romhacking.net](https://discord.gg/uAufcgz) - Where I got a lot of hacking help<br>
 [PC-9800 Series Central](http://discord.gg/j2ns7UQ) - Advice on working with real hardware<br>
 [SMT Modding Discord](https://discord.gg/9JGwcwMEkF) - Extra support<br>
+GDYU - Moral Support<br>
 my server - where i posted random out of context progress
 
