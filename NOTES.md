@@ -5,6 +5,8 @@
 `$D6AE` is the current area number<br>
 `$D6AF` is the current floor number<br>
 <br>
+`$D6BB` is the amount of Macca<br>
+<br>
 `$D000` is the current position of the password cursor<br>
 `$D001` is the current Y position of the password arrow<br>
 `$D002` is the current X position of the password arrow<br>
