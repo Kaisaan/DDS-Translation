@@ -15,7 +15,6 @@
 .rombanksize $2000
 .rombanks 32
 
-
 .stringmaptable mainFontMap "DDSMT.tbl"
 
 .macro text
@@ -48,7 +47,8 @@
 .org $6C2
 .section "Combat Log" overwrite
 	
-	text "DAMAGE"
+	text "DAMAGE\END"
+    text "SPOTTED\END"
 
 .ends
 
@@ -187,7 +187,7 @@ Izanami5:
 	text "the evil of\\n"
 	text "the demon world\\n"
 	text "is kept in balance\\n"
-	text "by the dark world."
+	text "by the dark world.\END"
 	
 .ends
 
@@ -197,7 +197,7 @@ Izanami6
 
 	text "Treat Cerberus well.\\n"
 	text "It has sworn eternal\\n"
-	text "loyalty to you."
+	text "loyalty to you.\END"
 
 .ends
 
