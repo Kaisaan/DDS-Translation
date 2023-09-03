@@ -12,7 +12,7 @@ Because the English text is going to be larger than the space allotted for the o
 | --- | --- |
 |Lines Inserted|7|
 |Lines Translated|All|
-|Manual Translated|0%|
+|Manual Translated|0 Pages|
 
 # Building
 Have [wla-dx](https://github.com/vhelin/wla-dx) installed and have the game's ROM as `Digital Devil Story.rom`. Then run `make` and it will result in the new `DDSE.rom` file.
