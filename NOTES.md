@@ -48,4 +48,4 @@ The routine at `$59CC` uses the character value `$FE` as a newline and also cent
 # Izanami Text
 Visiting a new Izanami shrine displays a text message. After exiting Nakajima's INT stat increases by 1  
 Izanami has a new message for each level of INT  
-In the original game, the pointer table for Izanami's messages are at `$1B51B` and are indexed by the value of `$D71C` (Nakajima's current INT)  
+The pointer table for Izanami's messages are at `$1B51B` and are indexed by the value of `$D71C` (Nakajima's current INT)  
