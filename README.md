@@ -46,7 +46,7 @@ YasaSheep - Japanese help<br>
 Zarby89 - Extra table file help<br>
 Sugunii - Special Thanks<br>
 <br>
-Supporters: comrade_hee_ho, seatsafteyswitch, eiowlta, quantumdog, reachforthemoon, naoyatoudou, Scone#6977, amazingcretin, alison1337, liamcarney, theoomslayer, boimses, hiking., xzippyzachx
+Supporters: comrade_hee_ho, seatsafteyswitch, eiowlta, quantumdog, reachforthemoon, naoyatoudou, Scone#6977, amazingcretin, alison1337, liamcarney, theoomslayer, boimses, hiking., xzippyzachx<br>
 <br>
 [Classic Persona Modding](https://discord.gg/ahg9gegCcm) - Where I'm able to post progress<br>
 [Romhacking.net](https://discord.gg/uAufcgz) - Where I got a lot of hacking help<br>
