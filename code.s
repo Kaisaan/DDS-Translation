@@ -193,11 +193,116 @@ Izanami5:
 
 .section "Izanami 6 text" overwrite
 	
-Izanami6
+Izanami6:
 
 	text "Treat Cerberus well.\\n"
 	text "It has sworn eternal\\n"
 	text "loyalty to you.\END"
+
+.ends
+
+.section "Izanami 7 text" overwrite
+
+Izanami7:
+
+    text "Take Yumiko and come\\n"
+    text "see me quickly...\END"
+
+.ends
+
+.section "Izanami 8 text" overwrite
+
+Izanami8:
+
+    text "Shikome is\\n"
+    text "enthralled by\\n"
+    text "the serene smell.\END"
+
+.ends
+
+.section "Izanami 9 text" overwrite
+
+Izanami9:
+
+    text "The flowing sand\\n"
+    text "fills the demonic\\n"
+    text "hourglass.\END"
+
+.ends
+
+.section "Izanami 10 text" overwrite
+
+Izanami10:
+
+    text "When you wish upon\\n"
+    text "the philosopher's\\n"
+    text "stone, your wisdom\\n" 
+    text "shall shine...\END"
+
+.ends
+
+.section "Izanami 11 text" overwrite
+
+Izanami11:
+
+    text "In the darkness,\\n"
+    text "good and evil\\n"
+    text "are separated in two\\n"
+    text "sides of a mirror.\END"
+
+.ends
+
+.section "Izanami 12 text" overwrite
+
+Izanami12:
+
+    text "You may enter the\\n"
+    text "dark mage's chamber\\n"
+    text "with a\\n"
+    text "holy talisman.\END"
+
+.ends
+
+.section "Izanami 13 text" overwrite
+
+Izanami13:
+
+    text "The demonic lion\\n"
+    text "eats the bones as\\n"
+    text "it bids its time.\END"
+
+.ends
+
+.section "Izanami 14 text" overwrite
+
+Izanami14:
+
+    text "A four-legged beast\\n"
+    text "runs through the\\n"
+    text "frozen darkness\\n"
+    text "not unlike a\\n"
+    text "strong gale.\END"
+
+.ends
+
+.section "Izanami 15 text" overwrite
+
+Izanami15:
+
+    text "I'll be waiting by\\n"
+    text "the gate of the\\n"
+    text "farthest land.\END"
+
+.ends
+
+.section "Izanami 16 text" overwrite
+
+Izanami16:
+
+    text "Yomotsu is my\\n"
+    text "servant, but do let\\n"
+    text "your guard down\\n"
+    text "lest you get hurt.\END"
 
 .ends
 
