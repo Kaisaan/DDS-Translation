@@ -98,6 +98,18 @@ CENTERTEXT:
 
 .bank 2
 .slot 4
+.orga $9ABB
+.section "Salesman Text" overwrite
+
+    ld hl, Salesman
+    ld b, $70
+    ld de, $1020
+    call LOADTEXT
+
+.ends
+
+.bank 2
+.slot 4
 .org $191B
 .section "Pointer load table" overwrite
 
@@ -111,7 +123,8 @@ CENTERTEXT:
 .org $151B
 .section "Text Pointer table rewrite" overwrite
 
-	.dw Izanami1, Izanami2, Izanami3, Izanami4, Izanami5, Izanami6
+	.dw Izanami1, Izanami2, Izanami3, Izanami4, Izanami5, Izanami6, Izanami7, Izanami8
+    .dw Izanami9, Izanami10, Izanami11, Izanami12, Izanami13, Izanami14, Izanami15, Izanami16
 
 .ends
 
@@ -132,6 +145,17 @@ CENTERTEXT:
 Cutscene1:
 
 	text "\"Hinokagutsuchi!\" The power of  the sword received from Izanami destroys the demon's power.\END"
+
+.ends
+
+.bank 16
+.slot 5
+.orga $ABFD
+.section "Salesman text" overwrite
+
+Salesman:
+
+    text "Want to buy something?\END"
 
 .ends
 
