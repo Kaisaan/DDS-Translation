@@ -39,6 +39,7 @@ You can contact me on Discord with the username `kaisaan` or you can join the [C
 
 # Credits
 Gabriulio - Translation<br>
+MKCA - Translation<br>
 Leina - Lots of Hacking help<br>
 Calindro - Hacking and Debugging help, also creator of Emulicious<br>
 abridgewater - Hacking and Japanese help<br>
