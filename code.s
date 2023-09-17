@@ -25,6 +25,8 @@
 
 .background "Digital Devil Story.rom"
 
+.incdir ""
+
 .bank 0
 .slot 2
 .org $054D
@@ -94,6 +96,24 @@ CENTERTEXT:
 	ld a, b
 	ret
 	
+.ends
+
+.bank 4
+.slot 6
+.orga $DE50
+.section "Title 1 Image" overwrite
+
+    .INCBIN	"title1.bin" READ 256
+
+.ends
+
+.bank 12
+.slot 5
+.org $A80
+.section "Title 2 Image" overwrite
+
+    .INCBIN	"title2.bin" READ 1136
+    
 .ends
 
 .bank 2
