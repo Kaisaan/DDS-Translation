@@ -44,9 +44,98 @@
 
 .ends
 
+.bank 0
+.slot 2
+.org $04D8
+.section "Cutscene 2 load text" overwrite
+
+	ld de, $1108
+	ld b, $F1
+	ld a, $0D
+	ld ($E002), a
+	ld ($7800), a
+	ld hl, Cutscene2
+	call LOADTEXT
+	.ds 11, $00
+	ret
+
+.ends
+
+.bank 0
+.slot 2
+.org $0781
+.section "Cutscene 3 load text" overwrite
+
+	ld de, $1108
+	ld b, $F1
+	ld a, $0D
+	ld ($E002), a
+	ld ($7800), a
+	ld hl, Cutscene3
+	call LOADTEXT
+	.ds 22, $00
+	ret
+
+.ends
+
+.bank 0
+.slot 2
+.org $0609
+.section "Cutscene 4 load text" overwrite
+
+	ld de, $1120
+	ld b, $F1
+	ld a, $0D
+	ld ($E002), a
+	ld ($7800), a
+	ld hl, Cutscene4
+	call LOADTEXT
+	.ds 11, $00
+    ld hl, $2920
+    ld a, $88
+    call $004D
+	ret
+
+.ends
+
+.bank 0
+.slot 2
+.org $06E1
+.section "Cutscene 5 load text" overwrite
+
+	ld de, $1130
+	ld b, $F1
+	ld a, $0D
+	ld ($E002), a
+	ld ($7800), a
+	ld hl, Cutscene5
+	call LOADTEXT
+	.ds 11, $00
+    ld hl, $0000
+	ld ($D414), hl
+	ld a, $08
+	ld ($D6AC), a
+	ld a, $01
+	ld ($D6FE), a
+	ret
+
+.ends
+
+.bank 0
+.slot 2
+.org $07B0
+.section "End Screen load text" overwrite
+
+    ld hl, End
+    ld de, $1000
+    ld b, $F0
+    call LOADTEXT
+
+.ends
+
 .bank 1
 .slot 3
-.org $6C2
+.org $06C2
 .section "Combat Log" overwrite
 	
 	text "DAMAGE\END"
@@ -158,12 +247,42 @@ CENTERTEXT:
 
 .ends
 
+.bank 1
+.slot 3
+.org $11D6
+.section "Light World names" overwrite
+
+    text "MALKUTH\END"
+    text "YESOD\END"
+    text "HOD\END"
+    text "NETZACH\END"
+    text "TIPHERETH\END"
+    text "GEBURAH\END"
+    text "CHESED\END"
+    text "BINAH\END"
+    text "CHOKMAH\END"
+    text "KETHER\END"
+    text "DAAT\END"
+
+
+.ends
+
 .bank 13
 .slot 0
 .orga $14CE
-.section "World text" overwrite
+.section "Dark World names" overwrite
 
-	text "TEST\END"
+    text "MALKUTH\END"
+    text "YESOD\END"
+    text "HOD\END"
+    text "NETZACH\END"
+    text "TIPHERETH\END"
+    text "GEBURAH\END"
+    text "CHESED\END"
+    text "BINAH\END"
+    text "CHOKMAH\END"
+    text "KETHER\END"
+    text "DAAT\END"
 
 .ends
 
