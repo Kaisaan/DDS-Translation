@@ -141,10 +141,20 @@ CENTERTEXT:
 .bank 13
 .slot 5
 .org $151B
-.section "Text Pointer table rewrite" overwrite
+.section "Izanami Text Pointer table rewrite" overwrite
 
 	.dw Izanami1, Izanami2, Izanami3, Izanami4, Izanami5, Izanami6, Izanami7, Izanami8
     .dw Izanami9, Izanami10, Izanami11, Izanami12, Izanami13, Izanami14, Izanami15, Izanami16
+
+.ends
+
+.bank 13
+.slot 5
+.org $1727
+.section "Yumiko Text Pointer table rewrite" overwrite
+
+    .dw Yumiko1, Yumiko2, Yumiko3, Yumiko4, Yumiko5, Yumiko6, Yumiko7, Yumiko8
+    .dw Yumiko9, Yumiko10, Yumiko11, Yumiko12, Yumiko13, Yumiko14, Yumiko15, Yumiko16
 
 .ends
 
@@ -164,7 +174,48 @@ CENTERTEXT:
 
 Cutscene1:
 
-	text "\"Hinokagutsuchi!\" The power of  the sword received from Izanami destroys the demon's power.\END"
+	text "\"Hinokagutsuchi!\" The power of the divine sword received from Izanami tears apart demonic force.\END"
+
+.ends
+
+.section "Cutscene 2 text" overwrite
+
+Cutscene2:
+
+    text "Master Loki has been defeated by the likes of you? You and Yumiko will be demon food!\END"
+
+.ends
+
+.section "Cutscene 3 text" overwrite
+
+Cutscene3:
+
+    text "To cross the world connecting the good and evil of the Demon World, you will require the power of a demon-beast. Run, Cerberus!\END"
+
+.ends
+
+.section "Cutscene 4 text" overwrite
+
+Cutscene4:
+
+    text "The Demon World's assaults are ceaseless! Will Nakajima be able to save Yumiko?"
+
+.ends
+
+
+.section "Cutscene 5 text" overwrite
+
+Cutscene5:
+
+    text "\"Akemi, I'm entrusting my message to this doll.\"\END"
+
+.ends
+
+.section "Cutscene 6 text" overwrite
+
+Cutscene6:
+
+    text "\"Impressive, to end up all the way here, but your life shall end here as well.\" The Demon Lord Set's voice echoes in the darkness.\END"
 
 .ends
 
@@ -175,7 +226,7 @@ Cutscene1:
 
 Salesman:
 
-    text "Want to buy something?\END"
+    text "\"Want to buy something?\"\END"
 
 .ends
 
@@ -186,30 +237,29 @@ Salesman:
 	
 Izanami1:
 
-	text "You should look for\\n"
-	text "your companion\\n"
-	text "Cerberus.\END"
-	
+	text "Quickly, find your\\n"
+    text "servant Cerberus.\END"
+
 .ends
 
 .section "Izanami 2 text" overwrite
 
 Izanami2:
 
-	text "Once you set foot in\\n"
-	text "the demon world,\\n"
-	text "there's no going\\n"
-	text "back.\END"
-	
+	text "There is no\\n"
+    text "going back,\\n"
+    text "once you set foot\\n"
+    text "in the Demon World.\END"
+
 .ends
 
 .section "Izanami 3 text" overwrite
 
 Izanami3:
 
-	text "When the moon\\n"
-	text "is full, demons\\n"
-	text "start moving\END"
+	text "As the moon waxes,\\n"
+    text "a \"demon\" starts\\n"
+    text "to move.\END"
 
 .ends
 
@@ -217,9 +267,9 @@ Izanami3:
 
 Izanami4:
 
-	text "Those obssessed with\\n"
-	text "money eat away\\n"
-	text "at the poor.\END"
+	text "The greedy wants to\\n"
+    text "devour the poor.\END"
+
 
 .ends
 
@@ -227,11 +277,10 @@ Izanami4:
 
 Izanami5:
 
-	text "The good and\\n"
-	text "the evil of\\n"
-	text "the demon world\\n"
-	text "is kept in balance\\n"
-	text "by the dark world.\END"
+	text "The good and evil of\\n"
+    text "the Demon World are\\n"
+    text "at balance within\\n"
+    text "a dark world.\END"
 	
 .ends
 
@@ -239,9 +288,9 @@ Izanami5:
 	
 Izanami6:
 
-	text "Treat Cerberus well.\\n"
-	text "It has sworn eternal\\n"
-	text "loyalty to you.\END"
+	text "Treat Cerberus well.\\n" 
+    text "He has sworn to you\\n"
+    text "eternal loyalty.\END"
 
 .ends
 
@@ -278,10 +327,10 @@ Izanami9:
 
 Izanami10:
 
-    text "When you wish upon\\n"
-    text "the philosopher's\\n"
-    text "stone, your wisdom\\n" 
-    text "shall shine...\END"
+    text "May your life shine\\n"
+    text "when you wish upon\\n"
+    text "the Philosopher's\\n"
+    text "Stone...\END"
 
 .ends
 
@@ -289,10 +338,11 @@ Izanami10:
 
 Izanami11:
 
-    text "In the darkness,\\n"
+    text "Within darkness,\\n"
     text "good and evil\\n"
-    text "are separated in two\\n"
-    text "sides of a mirror.\END"
+    text "become the sides\\n"
+    text "of a mirror.\END"
+
 
 .ends
 
@@ -301,9 +351,10 @@ Izanami11:
 Izanami12:
 
     text "You may enter the\\n"
-    text "dark mage's chamber\\n"
-    text "with a\\n"
-    text "holy talisman.\END"
+    text "dark mage's garden\\n"
+    text "with a holy\\n"
+    text "talisman.\END"
+
 
 .ends
 
@@ -311,7 +362,7 @@ Izanami12:
 
 Izanami13:
 
-    text "The demonic lion\\n"
+    text "The lion-demon\\n"
     text "eats the bones as\\n"
     text "it bids its time.\END"
 
@@ -333,9 +384,10 @@ Izanami14:
 
 Izanami15:
 
-    text "I'll be waiting by\\n"
-    text "the gate of the\\n"
-    text "farthest land.\END"
+    text "In the farthest\\n"
+    text "place, by the\\n"
+    text "great gate, I await.\END"
+
 
 .ends
 
@@ -343,10 +395,193 @@ Izanami15:
 
 Izanami16:
 
-    text "Yomotsu is my\\n"
-    text "servant, but do let\\n"
-    text "your guard down\\n"
-    text "lest you get hurt.\END"
+    text "Yomotsu-Shikome is\\n"
+    text "my servant, and she\\n"
+    text "can be protective\\n"
+    text "to a fault.\END"
+
+.ends
+
+.section "Yumiko 1 text" overwrite
+
+Yumiko1:
+
+    text "\"This world lies on\\n" 
+    text "the Demon World's\\n" 
+    text "obverse. I'm-\"\END"
+
+.ends
+
+.section "Yumiko 2 text" overwrite
+
+Yumiko2:
+
+    text "\"Akemi, you won't\\n"
+    text "abandon me like you\\n"
+    text "did to Izanami,\\n"
+    text "will you?\"\END"
+
+.ends
+
+.section "Yumiko 3 text" overwrite
+
+Yumiko3:
+
+    text "\"Izanami wants me,\\n" 
+    text "to be reunited with\\n"
+    text "Izanagi's\\n"
+    text "reincarnation --" 
+    text "you.\"\END"
+
+
+.ends
+
+.section "Yumiko 4 text" overwrite
+
+Yumiko4:
+
+    text "\"Don't let your\\n"
+    text "guard down!\\n"
+    text "Ms. Ohara is being\\n" 
+    text "controlled by\\n"
+    text "Loki's magic!\"\END"
+
+.ends
+
+.section "Yumiko 5 text" overwrite
+
+Yumiko5:
+
+    text "\"Poor Ms. Ohara,\\n"
+    text "she's in love with\\n"
+    text "Loki. Akemi, please\\n"
+    text "help her...\"\END"
+
+.ends
+
+.section "Yumiko 6 text" overwrite
+
+Yumiko6:
+
+    text "\"If you defeat Loki,\\n"
+    text "she's sure to get\\n"
+    text "angry and\\n"
+    text "attack you.\"\END"
+
+.ends
+
+.section "Yumiko 7 text" overwrite
+
+Yumiko7:
+
+    text "\"Hidden things are\\n" 
+    text "revealed by\\n"
+    text "the moonlight.\"\END"
+
+.ends
+
+.section "Yumiko 8 text" overwrite
+
+Yumiko8:
+
+    text "\"A wandering soul\\n" 
+    text "is in possession\\n"
+    text "of a shining stone.\"\END"
+
+.ends
+
+.section "Yumiko 9 text" overwrite
+
+Yumiko9:
+
+    text "\"In the future,\\n"
+    text "where the Demon\\n"
+    text "Lords lie\\n"
+    text "vanquished, the\\n"
+    text "Sun's shield\\n"
+    text "shines brightly.\"\END"
+
+.ends
+
+.section "Yumiko 10 text" overwrite
+
+Yumiko10:
+
+    text "\"It hurts so much...\\n"
+    text "Akemi, I think\\n"
+    text "I'm done for...\"\END"
+
+.ends
+
+.section "Yumiko 11 text" overwrite
+
+Yumiko11:
+
+    text "\"I don't know where\\n"
+    text "I am... but the\\n"
+    text "place I'm trapped in\\n" 
+    text "is dark and warm.\"\END"
+
+.ends
+
+.section "Yumiko 12 text" overwrite
+
+Yumiko12:
+
+    text "\"Akemi, help!\\n"
+    text "Loki...\\n"
+    text "right here...\"\END"
+
+.ends
+
+.section "Yumiko 13 text" overwrite
+
+Yumiko13:
+
+    text "\"You must seal the\\n"
+    text "magic that grants\\n"
+    text "Loki's immortality\"\END"
+	text "                    "
+
+.ends
+
+.section "Yumiko 14 text" overwrite
+
+Yumiko14:
+
+    text "\"Flowing silver will\\n"
+    text "make the deluded\\n"
+    text "woman come back\\n"
+    text "to her senses.\"\END"
+
+.ends
+
+.section "Yumiko 15 text" overwrite
+
+Yumiko15:
+
+    text "\"I am... by a\\n"
+    text "power... even\\n"
+    text "stronger than\\n"
+    text "Loki's...\"\END"
+
+.ends
+
+.section "Yumiko 16 text" overwrite
+
+Yumiko16:
+
+    text "\"An ancient item\\n" 
+    text "will seal the\\n"
+    text "Demon Lord's power.\"\END"
+
+.ends
+
+.section "End Screen text" overwrite
+
+End:
+
+    text "The fight is over.\END"
 
 .ends
 
