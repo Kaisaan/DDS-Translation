@@ -10,7 +10,7 @@ Because the English text is going to be larger than the space allotted for the o
 # Progress
 |Task|Progress|
 | --- | --- |
-|Lines Inserted|7|
+|Lines Inserted|All|
 |Lines Translated|All|
 |Manual Translated|0 Pages|
 
