@@ -148,6 +148,28 @@ COMBAT:
 
 .bank 2
 .slot 4
+.org $05E9
+.section "Telenet text" overwrite
+
+Telenet:
+
+    text "Presented by Telenet\END"
+
+.ends
+
+.bank 2
+.slot 4
+.org $0D8D 
+.section "Password Error" overwrite
+
+Error:
+
+    text "Password Error\END"
+
+.ends
+
+.bank 2
+.slot 4
 .orga $9080
 .section "Text routine" overwrite
 
@@ -308,7 +330,7 @@ Salesman:
 Password:
 
 	.db $01 $00 $05 $01 $04 $01 $03 $01 $02 $01 $01 $01 $01 $02 $01 $03 $01 $04 $01 $05
-	text "PASSWORD\END"
+	text "Password\END"
 	.db $F4 $20 $F5 $20 $F6 $20 $20 $20 $F7 $FF
 .db $91 $92 $93 $94 $95 $00 $EA $EB $EC $ED $EE $96 $97 $98 $99 $9A $00 $EF $F0 $F1 $F2 $F3 $9B $9C $9D $9E $9F $00 $F7 $F8 $F9 $FA $FB $E0 $E1 $E2 $E3 $E4 $00 $F4 $F5 $F6 $00 $FE $E5 $E6 $E7 $E8 $E9 $00 $FF $00 $00 $00 $00
 
