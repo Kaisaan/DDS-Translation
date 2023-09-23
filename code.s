@@ -135,11 +135,14 @@
 
 .bank 1
 .slot 3
-.org $06C2
+.org $06B9
 .section "Combat Log" overwrite
-	
-	text "DAMAGE\END"
-    text "SPOTTED\END"
+
+COMBAT:	
+
+	text "SPOTTED\END"
+    .db $00
+    text "DAMAGE\END"
 
 .ends
 
@@ -288,7 +291,29 @@ CENTERTEXT:
 
 .bank 16
 .slot 5
-.orga $B000
+.orga $ABFD
+.section "Salesman text" overwrite
+
+Salesman:
+
+    text "\"Want to buy something?\"\END"
+
+.ends
+
+.bank 16
+.slot 5
+.orga $B18A
+.section "Password Screen" overwrite
+
+Password:
+
+	.db $01 $00 $05 $01 $04 $01 $03 $01 $02 $01 $01 $01 $01 $02 $01 $03 $01 $04 $01 $05
+	text "PASSWORD\END"
+	.db $F4 $20 $F5 $20 $F6 $20 $20 $20 $F7 $FF
+.db $91 $92 $93 $94 $95 $00 $EA $EB $EC $ED $EE $96 $97 $98 $99 $9A $00 $EF $F0 $F1 $F2 $F3 $9B $9C $9D $9E $9F $00 $F7 $F8 $F9 $FA $FB $E0 $E1 $E2 $E3 $E4 $00 $F4 $F5 $F6 $00 $FE $E5 $E6 $E7 $E8 $E9 $00 $FF $00 $00 $00 $00
+
+.ends
+
 .section "Cutscene 1 text" overwrite
 
 Cutscene1:
@@ -317,7 +342,7 @@ Cutscene3:
 
 Cutscene4:
 
-    text "The Demon World's assaults are ceaseless! Will Nakajima be able to save Yumiko?"
+    text "The Demon World's assaults are ceaseless! Will Nakajima be able to save Yumiko?\END"
 
 .ends
 
@@ -338,20 +363,6 @@ Cutscene6:
 
 .ends
 
-.bank 16
-.slot 5
-.orga $ABFD
-.section "Salesman text" overwrite
-
-Salesman:
-
-    text "\"Want to buy something?\"\END"
-
-.ends
-
-.bank 16
-.slot 5
-.orga $B6E7
 .section "Izanami 1 text" overwrite
 	
 Izanami1:
@@ -660,7 +671,6 @@ Yumiko13:
     text "\"You must seal the\\n"
     text "magic that grants\\n"
     text "Loki's immortality\"\END"
-	text "                    "
 
 .ends
 
@@ -706,21 +716,10 @@ End:
 
 .bank 16
 .slot 5
-.orga $B18A
-.section "Password Screen" overwrite
-
-	Password:
-	.db $01 $00 $05 $01 $04 $01 $03 $01 $02 $01 $01 $01 $01 $02 $01 $03 $01 $04 $01 $05
-	text "PASSWORD\END"
-	.db $F4 $20 $F5 $20 $F6 $20 $20 $20 $F7 $FF
-.db $91 $92 $93 $94 $95 $00 $EA $EB $EC $ED $EE $96 $97 $98 $99 $9A $00 $EF $F0 $F1 $F2 $F3 $9B $9C $9D $9E $9F $00 $F7 $F8 $F9 $FA $FB $E0 $E1 $E2 $E3 $E4 $00 $F4 $F5 $F6 $00 $FE $E5 $E6 $E7 $E8 $E9 $00 $FF $00 $00 $00 $00
-
-.ends
-
-.bank 16
-.slot 5
 .orga $BFEC
-.section "Start/Continue" overwrite
+.section "Start/Continue/Done" overwrite
+
+Menu:
 
 	text "Start\END"
 	text "Continue\END"
