@@ -2,11 +2,12 @@
 Leina is much more experience with Z80 Assembly and is able to make better notes than I can.
 
 # Password System 
-1 - when the last byte is not the right checksum value
-2 - when the bits in the 8d9c struct are set in the bits in the d7a8 struct
-3 - after the 8d9c struct check, if any values in the d7a8 struct are >= 2b
-4 - if the 5 bits that make d6ae are all 0 (as the levels are 1-indexed)
-5 - if d6ae becomes >= $15
+Password Error will appear when:
+1. when the last byte is not the right checksum value
+2. when the bits in the 8d9c struct are set in the bits in the d7a8 struct
+3. after the 8d9c struct check, if any values in the d7a8 struct are >= 2b
+4. if the 5 bits that make d6ae are all 0 (as the levels are 1-indexed)
+5. if d6ae becomes >= $15
 
 # Password System Details
 You can also do a vram watchpoint instead of searching ram. Doing either leads you to `_LABEL_4965_`
