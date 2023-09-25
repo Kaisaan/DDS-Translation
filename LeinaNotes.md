@@ -114,74 +114,74 @@ so after all the transformations, given the masks, the relevant bits in the 15 c
 
 Here's the specifics, but of course, 4AC9 does a few more things, which I'll paste after
 
-where ix = $d277
-$d7a8 - $37
-  bit 5 - if set, sets $d6c1 to 1
-  bit 4 - if set, sets ix+14 to 1
-  bit 2 - if set, sets ix+17 to 1
-  bits 0-1 - +1, then `*$80`, that word is stored in $d6bc
-
-$d7a9 - $37
-  bit 5 - if set, sets $d6be and ix+33 to 1
-  bit 4 - if set, sets ix+31 to 1
-  bits 0-2 - if non-0, gets the `value*5` into $d263, and sets ix+13 to 1
-
-$d7aa - $37
-  bit 5 - if set, sets $d7a5 to 1
-  bit 4 - if set, sets ix+20 to 1
-  bits 0-2 - stored in ix+9
-
-$d7ab - $37
-  bit 5 - if set, sets $d6bf to 1
-  bit 4 - if set, sets ix+27 to 1
-  bits 0-2 - stored in ix+10
-
-$d7ac - $1f
-  bit 4 - if set, sets ix+18 to 1
-  bit 3 - if set, sets ix+15 to 1
-  bits 0-2 - stored in ix+11
-
-$d7ad - $1f
-  bit 4 - if set, sets ix+16 to 1
-  bit 3 - if set, sets ix+19 to 1 and $d7a4 to $10
-  bits 0-2 - stored in ix+12
-
-$d7ae - $1f
-  bit 4 - if set, sets ix+25 to 1
-  bit 3 - if set, sets ix+24 to 1
-  bits 0-2 - the `value*32` is stored in $d45c. If non-0, sets ix+4 to 1
-
-$d7af - $27
-  bit 5 - see $d7b0
-  bits 0-2 - the `value*32` is stored in $d45b. If non-0, sets ix+5 to 1
-
-$d7b0 - $1f
-  bits 3-4 - combined with $d7af's bit 5, then /8 and stored in ix+29
-  bits 0-2 - stored in ix+32
-
-$d7b1 - $27
-  bit 5 - see $d7b2
-  bits 0-2 - stored in ix+23
-
-$d7b2 - $1f
-  bits 3-4 - combined with $d7b1's bit 5, then /8 and stored in ix+28
-  bits 0-2 - stored in ix+26
-
-$d7b3 - $1f
-  bits 3-4 - see $d7b6
-  bits 0-2 - stored in ix+22
-
-$d7b4 - $1f
-  bit 4 - see $d7b6
-  bits 0-3 - should be stored in $d71c, but $d7b5 overrides it
-
-$d7b5 - $0f
-  bits 0-3 - stored in $d71c
-
-$d7b6 - $1f
-  bit 4 - *2 and combined with $d7b3's bits 3-4, then /8 and stored in ix+30
-  bits 0-3 - combined with $d7b4's bit 4, and stored in $d6ae
-
+where ix = $d277<br>
+$d7a8 - $37<br>
+  bit 5 - if set, sets $d6c1 to 1<br>
+  bit 4 - if set, sets ix+14 to 1<br>
+  bit 2 - if set, sets ix+17 to 1<br>
+  bits 0-1 - +1, then `*$80`, that word is stored in $d6bc<br>
+<br>
+$d7a9 - $37<br>
+  bit 5 - if set, sets $d6be and ix+33 to 1<br>
+  bit 4 - if set, sets ix+31 to 1<br>
+  bits 0-2 - if non-0, gets the `value*5` into $d263, and sets ix+13 to 1<br>
+<br>
+$d7aa - $37<br>
+  bit 5 - if set, sets $d7a5 to 1<br>
+  bit 4 - if set, sets ix+20 to 1<br>
+  bits 0-2 - stored in ix+9<br>
+<br>
+$d7ab - $37<br>
+  bit 5 - if set, sets $d6bf to 1<br>
+  bit 4 - if set, sets ix+27 to 1<br>
+  bits 0-2 - stored in ix+10<br>
+<br>
+$d7ac - $1f<br>
+  bit 4 - if set, sets ix+18 to 1<br>
+  bit 3 - if set, sets ix+15 to 1<br>
+  bits 0-2 - stored in ix+11<br>
+<br>
+$d7ad - $1f<br>
+  bit 4 - if set, sets ix+16 to 1<br>
+  bit 3 - if set, sets ix+19 to 1 and $d7a4 to $10<br>
+  bits 0-2 - stored in ix+12<br>
+<br>
+$d7ae - $1f<br>
+  bit 4 - if set, sets ix+25 to 1<br>
+  bit 3 - if set, sets ix+24 to 1<br>
+  bits 0-2 - the `value*32` is stored in $d45c. If non-0, sets ix+4 to 1<br>
+<br>
+$d7af - $27<br>
+  bit 5 - see $d7b0<br>
+  bits 0-2 - the `value*32` is stored in $d45b. If non-0, sets ix+5 to 1<br>
+<br>
+$d7b0 - $1f<br>
+  bits 3-4 - combined with $d7af's bit 5, then /8 and stored in ix+29<br>
+  bits 0-2 - stored in ix+32<br>
+<br>
+$d7b1 - $27<br>
+  bit 5 - see $d7b2<br>
+  bits 0-2 - stored in ix+23<br>
+<br>
+$d7b2 - $1f<br>
+  bits 3-4 - combined with $d7b1's bit 5, then /8 and stored in ix+28<br>
+  bits 0-2 - stored in ix+26<br>
+<br>
+$d7b3 - $1f<br>
+  bits 3-4 - see $d7b6<br>
+  bits 0-2 - stored in ix+22<br>
+<br>
+$d7b4 - $1f<br>
+  bit 4 - see $d7b6<br>
+  bits 0-3 - should be stored in $d71c, but $d7b5 overrides it<br>
+<br>
+$d7b5 - $0f<br>
+  bits 0-3 - stored in $d71c<br>
+<br>
+$d7b6 - $1f<br>
+  bit 4 - *2 and combined with $d7b3's bits 3-4, then /8 and stored in ix+30<br>
+  bits 0-3 - combined with $d7b4's bit 4, and stored in $d6ae<br>
+<br>
 
 Other code run
 ```
