@@ -33,7 +33,8 @@ There's only 5 checks (as in, 5 jumps to `_LABEL_4A11`)
   
 1. After the first "passthrough" (subtraction) it adds up the first 14 characters, it then subtracts $2B from this total and then check if its a negative result (it will subtract $2B again if not negative again), It will then add back $2B, if this result does not equal the value of the final character, then it is invalid  
   
-2. After the second "passthrough" (with the bitwise AND $07 doubled then subtracted) it does bitwise AND with the values in 8D9C, which are C8 C8 C8 C8 E0 E0 E0 D8 E0 D8 E0 E0 E0 F0 E0 If any of these AND operations result in a non-zero value, it's invalid   
+2. After the second "passthrough" (with the bitwise AND $07 doubled then subtracted) it does bitwise AND with the values in 8D9C, which are `C8 C8 C8 C8 E0 E0 E0 D8 E0 D8 E0 E0 E0 F0 E0` If any of these AND operations result in a non-zero value, it's invalid
+<br>
 *Leina summarized the rest*  
   
 # Password System Details  
