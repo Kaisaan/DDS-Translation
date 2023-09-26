@@ -24,7 +24,7 @@ After the initial "passthrough" it subtracts $91, or $D1 if the value is $E0 or 
 It does some subtraction with the second last value (bitwise AND $07 then doubled)    
 ```00 00 00 00      00 08 00 00     00 00 00 00      00 00 02 15```  
   
-There's supposed to be some bitwise AND stuff with a bunch of values at $8D9C but it's just showing up as reads from the ram (those new values are put into a then?)  
+There's supposed to be some bitwise AND stuff with a bunch of values at `$4D9C`  
   
 And then at this point, ix = $D277 and iy = $D7A8   
 this is where the fun stuff™️ (that I don't understand) happens where different values from iy+N (different values of above) are read, and ix is written to accordingly based on bit stuff, in this case only up to D7B6 (the second last character was read)  
