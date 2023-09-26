@@ -3,6 +3,9 @@
 `$D001` is the current Y position of the password arrow<br>
 `$D002` is the current X position of the password arrow<br>
 <br>
+`$D265` is the moon state<br>
+`$D266` is the moon state timer<br>
+<br>
 `$D271` is Nakajima's current HP<br>
 `$D272` is Nakajima's current level<br>
 <br>
