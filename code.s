@@ -496,14 +496,14 @@ Password:
 
 Files: text "PROGRAMS\END"
 Goto: text "GOTO_NEXT_SPR\END"
-NoComp: text "NO_COMPUTER\END"
+NoComp: text "NO COMPUTER\END"
 NextSpr: text "MAP_NEXT_SPR\END"
 ItemList: text "LIST_ITEMS\END"
 SprsMap: text "MAP_ALL_SPRS\END"
 Pass: text "GET_PASSWORD\END"
-NoMap: text "MAP_NOT_FOUND\END"
-NoBat: text "BATTERY_LOW\END"
-Battery: text "BATTERY_LEVEL\END"
+NoMap: text "MAP NOT FOUND\END"
+NoBat: text "BATTERY LOW\END"
+Battery: text "BATTERY LEVEL\END"
 
 .ends
 
