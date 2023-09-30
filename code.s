@@ -140,8 +140,7 @@
 
 COMBAT:	
 
-	text "SPOTTED\END"
-    .db $00
+	text "SPOTTED \END"
     text "DAMAGE\END"
 
 .ends
@@ -212,6 +211,28 @@ CENTERTEXT:
 	
 .ends
 
+.bank 14
+.slot 4
+.orga $9C51
+.section "HHC Text" overwrite
+
+HHCTEXT:
+
+	ld a, ($E002)
+	push af
+	ld a, :LABEL1DC51
+	ld ($E002), a
+	ld ($7800), a
+	call LABEL1DC51
+	ld b, a
+	pop af
+	ld ($E002), a
+	ld ($7800), a
+	ld a, b
+	ret
+	
+.ends
+
 .bank 4
 .slot 6
 .orga $DE50
@@ -233,7 +254,7 @@ CENTERTEXT:
 .bank 2
 .slot 4
 .orga $9ABB
-.section "Salesman Text" overwrite
+.section "Load Salesman Text" overwrite
 
     ld hl, Salesman
     ld b, $70
@@ -271,6 +292,8 @@ CENTERTEXT:
     .dw Yumiko9, Yumiko10, Yumiko11, Yumiko12, Yumiko13, Yumiko14, Yumiko15, Yumiko16
 
 .ends
+
+; Load world names
 
 .bank 1
 .slot 3
@@ -311,14 +334,147 @@ CENTERTEXT:
 
 .ends
 
-.bank 16
-.slot 5
-.orga $ABFD
-.section "Salesman text" overwrite
+.bank 14
+.slot 2
+.org $17CB
+.section "Load HHC Text" overwrite
 
-Salesman:
+		ld b, $F0
+		ld hl, Files
+		ld de, $00C0
+		call HHCTEXT
+		call $9BBF
+		xor a
+		ld ($D6FD), a
+		ld b, $80
+		ld hl, Goto
+		ld de, $01F0
+		call HHCTEXT
+		ld a, ($D28A)
+		or a
+		jr nz, LABEL1D7FC
+		ld b, $E8
+		ld hl, NoComp
+		ld de, $0330
+		call HHCTEXT
+		jp $94D7
+	
+LABEL1D7FC:	
+		ld a, ($D7A4)
+		or a
+		jr nz, LABEL1D81F
+		ld a, ($D280)
+		or a
+		jr nz, LABEL1D816
+		ld b, $E8
+		ld hl, NoBat
+		ld de, $0330
+		call HHCTEXT
+		jp $94D7
+	
+LABEL1D816:	
+		dec a
+		ld ($D280), a
+		ld a, $10
+		ld ($D7A4), a
+LABEL1D81F:	
+		ld b, $70
+		ld hl, NextSpr
+		ld de, $0330
+		call HHCTEXT
+		ld b, $70
+		ld hl, ItemList
+		ld de, $0810
+		call HHCTEXT
+		ld b, $70
+		ld hl, SprsMap
+		ld de, $0950
+		call HHCTEXT
+		ld b, $70
+		ld hl, Pass
+		ld de, $0A90
+		call HHCTEXT
+		jp $94D7
 
-    text "\"Want to buy something?\"\END"
+.ends
+
+.bank 14
+.slot 2
+.org $19DF
+.section "Map text" overwrite 
+
+MapText: 
+    text "From"
+    .db $20 $20 $20 $20
+    text "to"
+    .db $20 $20 $20 $FF
+
+.ends
+
+.bank 14
+.slot 2
+.org $1BBF
+.section "Battery Text" overwrite
+
+		ld b, $70
+		ld hl, Battery
+		ld de, $1298
+		call HHCTEXT
+
+.ends
+
+.bank 14
+.slot 2
+.org $15D3
+.section "HHC Password Text" overwrite
+
+		ld b, $70
+		ld hl, Pass
+		ld de, $02A8
+		call HHCTEXT
+
+.ends
+
+.bank 14
+.slot 2
+.org 1615
+.section "Go to next SPR (No Map)" overwrite
+
+		ld b, $70
+		ld hl, Goto
+		ld de, $0178
+		call HHCTEXT
+		ld a, ($D291)
+		or a
+		.db $20 $0E
+		ld b, $E8
+		ld hl, NoMap
+		ld de, $03F8
+		call HHCTEXT
+
+.ends
+
+.bank 14
+.slot 2
+.org $1AAA
+.section "Item List text" overwrite
+		
+        ld b, $70
+		ld hl, ItemList
+		ld de, $00D0
+		call HHCTEXT
+
+.ends
+
+.bank 14
+.slot 2
+.org $195D
+.section "Map Title Text" overwrite
+
+		ld b, $70
+		ld hl, SprsMap
+		ld de, $00C8
+		call HHCTEXT
 
 .ends
 
@@ -336,11 +492,26 @@ Password:
 
 .ends
 
+.section "HHC Menu Text" overwrite
+
+Files: text "PROGRAMS\END"
+Goto: text "GOTO_NEXT_SPR\END"
+NoComp: text "NO_COMPUTER\END"
+NextSpr: text "MAP_NEXT_SPR\END"
+ItemList: text "LIST_ITEMS\END"
+SprsMap: text "MAP_ALL_SPRS\END"
+Pass: text "GET_PASSWORD\END"
+NoMap: text "MAP_NOT_FOUND\END"
+NoBat: text "BATTERY_LOW\END"
+Battery: text "BATTERY_LEVEL\END"
+
+.ends
+
 .section "Cutscene 1 text" overwrite
 
 Cutscene1:
 
-	text "\"Hinokagutsuchi!\" The power of the divine sword received from Izanami tears apart demonic force.\END"
+	text "\"Hinokagutsuchi!\" The power of  the divine sword received from  Izanami tears apart demonic force.\END"
 
 .ends
 
@@ -728,6 +899,14 @@ Yumiko16:
 
 .ends
 
+.section "Salesman text" overwrite
+
+Salesman:
+
+    text "\"Want to buy something?\"\END"
+
+.ends
+
 .section "End Screen text" overwrite
 
 End:
@@ -869,9 +1048,6 @@ LABEL07DF:
 	
 .ends
 
-.bank 16
-.slot 5
-.orga $A100
 .section "Newline and Center" overwrite
 
 LABEL59CC:
@@ -899,5 +1075,82 @@ LABEL59D8:
 	ex de, hl
 	pop hl
 	ret
+
+.ends
+
+.section "Print HHC Text" overwrite
+
+LABEL1DC51:	
+		ld a, (hl)
+		cp $FE
+		ret nc
+		ld c, $00
+		cp $5B
+		jr c, LABEL1DC5D
+		ld c, $01
+LABEL1DC5D:	
+		inc hl
+		push bc
+		push hl
+		push de
+		call LABEL1DC6E
+		pop de
+		ld hl, $0008
+		add hl, de
+		ex de, hl
+		pop hl
+		pop bc
+		jr LABEL1DC51
+	
+LABEL1DC6E:	
+		push de
+		push bc
+		ld l, a
+		ld h, $00
+		add hl, hl
+		add hl, hl
+		add hl, hl
+		ld de, $1BBF
+		add hl, de
+		ld b, $08
+		ld de, $D62B
+LABEL1DC7F:	
+		ld a, (hl)
+		inc hl
+		ld (de), a
+		inc de
+		djnz LABEL1DC7F
+		pop bc
+		push bc
+		ld a, c
+		or a
+		jr nz, LABEL1DC98
+		ld b, $08
+		ld hl, $D62B
+LABEL1DC90:	
+		ld a, (hl)
+		srl a
+		or (hl)
+		ld (hl), a
+		inc hl
+		djnz LABEL1DC90
+LABEL1DC98:	
+		pop bc
+		pop de
+		push bc
+		push de
+		ld hl, $D62B
+		ld bc, $0008
+		call $005C
+		pop de
+		pop bc
+		ld a, b
+		cp $FF
+		ret z
+		ld bc, $2000
+		add hl, bc
+		ld bc, $0008
+		call $0056
+		ret
 
 .ends
