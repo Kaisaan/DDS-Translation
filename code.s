@@ -251,6 +251,24 @@ HHCTEXT:
     
 .ends
 
+.bank 3
+.slot 5
+.org $14A0
+.section "Title 3 Image" overwrite
+
+    .INCBIN	"title3.bin" READ 158
+
+.ends
+
+.bank 6
+.slot 6
+.org $1F00
+.section "Title 4 Image" overwrite
+
+    .INCBIN	"title4.bin" READ 128
+
+.ends
+
 .bank 2
 .slot 4
 .orga $9ABB

@@ -46,6 +46,7 @@ abridgewater - Hacking and Japanese help<br>
 YasaSheep - Japanese help<br>
 Zarby89 - Extra table file help<br>
 Z64Gaming - Title Screen Graphics<br>
+agarpac - Other Graphics<br>
 Sugunii - Special Thanks<br>
 <br>
 Supporters: comrade_hee_ho, seatsafteyswitch, eiowlta, quantumdog, reachforthemoon, naoyatoudou, Scone#6977, amazingcretin, alison1337, liamcarney, theoomslayer, boimses, hiking., xzippyzachx, yoush03<br>
