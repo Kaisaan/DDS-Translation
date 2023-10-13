@@ -247,7 +247,7 @@ HHCTEXT:
 .org $A80
 .section "Title 2 Image" overwrite
 
-    .INCBIN	"title2.bin" READ 1136
+    .INCBIN	"title2.bin" READ 1176
     
 .ends
 
@@ -311,25 +311,41 @@ HHCTEXT:
 
 .ends
 
-; Load world names
+.bank 1
+.slot 3
+.org $11C0
+.section "Load Light World names" overwrite
+
+    .dw MalkuthL, YesodL, HodL, NetzachL, TipheresL, GeburahL, ChesedL, BinahL, ChokmahL, KetherL, DaathL
+
+.ends
 
 .bank 1
 .slot 3
 .org $11D6
 .section "Light World names" overwrite
 
-    text "MALKUTH\END"
-    text "YESOD\END"
-    text "HOD\END"
-    text "NETZACH\END"
-    text "TIPHERETH\END"
-    text "GEBURAH\END"
-    text "CHESED\END"
-    text "BINAH\END"
-    text "CHOKMAH\END"
-    text "KETHER\END"
-    text "DAAT\END"
+    MalkuthL:   text "MALKUTH\END"
+    YesodL:     text "YESOD\END"
+    HodL:       text "HOD\END"
+    NetzachL:   text "NETZACH\END"
+    TipheresL:  text "TIPHERETH\END"
+    GeburahL:   text "GEBURAH\END"
+    ChesedL:    text "CHESED\END"
+    BinahL:     text "BINAH\END"
+    ChokmahL:   text "CHOKMAH\END"
+    KetherL:    text "KETHER\END"
+    DaathL:     text "DAAT\END"
 
+
+.ends
+
+.bank 13
+.slot 0
+.org $14B8
+.section "Load Dark World names" overwrite
+
+    .dw MalkuthD, YesodD, HodD, NetzachD, TipheresD, GeburahD, ChesedD, BinahD, ChokmahD, KetherD, DaathD
 
 .ends
 
@@ -338,17 +354,17 @@ HHCTEXT:
 .orga $14CE
 .section "Dark World names" overwrite
 
-    text "MALKUTH\END"
-    text "YESOD\END"
-    text "HOD\END"
-    text "NETZACH\END"
-    text "TIPHERETH\END"
-    text "GEBURAH\END"
-    text "CHESED\END"
-    text "BINAH\END"
-    text "CHOKMAH\END"
-    text "KETHER\END"
-    text "DAAT\END"
+    MalkuthD:   text "MALKUTH\END"
+    YesodD:     text "YESOD\END"
+    HodD:       text "HOD\END"
+    NetzachD:   text "NETZACH\END"
+    TipheresD:  text "TIPHERETH\END"
+    GeburahD:   text "GEBURAH\END"
+    ChesedD:    text "CHESED\END"
+    BinahD:     text "BINAH\END"
+    ChokmahD:   text "CHOKMAH\END"
+    KetherD:    text "KETHER\END"
+    DaathD:     text "DAAT\END"
 
 .ends
 
