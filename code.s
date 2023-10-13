@@ -22,6 +22,7 @@
 .endm
 
 ;text "                    "
+;text "                                "
 
 .background "Digital Devil Story.rom"
 
@@ -49,7 +50,7 @@
 .org $04D8
 .section "Cutscene 2 load text" overwrite
 
-	ld de, $1108
+	ld de, $1100
 	ld b, $F1
 	ld a, $0D
 	ld ($E002), a
@@ -66,7 +67,7 @@
 .org $0781
 .section "Cutscene 3 load text" overwrite
 
-	ld de, $1108
+	ld de, $1100
 	ld b, $F1
 	ld a, $0D
 	ld ($E002), a
@@ -83,7 +84,7 @@
 .org $0609
 .section "Cutscene 4 load text" overwrite
 
-	ld de, $1120
+	ld de, $1100
 	ld b, $F1
 	ld a, $0D
 	ld ($E002), a
@@ -103,7 +104,7 @@
 .org $06E1
 .section "Cutscene 5 load text" overwrite
 
-	ld de, $1130
+	ld de, $1100
 	ld b, $F1
 	ld a, $0D
 	ld ($E002), a
@@ -118,6 +119,28 @@
 	ld a, $01
 	ld ($D6FE), a
 	ret
+
+.ends
+
+.bank 0
+.slot 2
+.org $0723
+.section "Cutscene 6 load text" overwrite
+		ld de, $1100
+		ld b, $F1
+		ld a, $0D
+		ld ($E002), a
+		ld ($7800), a
+		ld hl, Cutscene6
+		call LOADTEXT
+        .ds 22, $00
+		ld hl, $0000
+		ld ($D414), hl
+		ld a, $08
+		ld ($D6AC), a
+		ld a, $01
+		ld ($D6FE), a
+		ret
 
 .ends
 
@@ -545,7 +568,10 @@ Battery: text "BATTERY LEVEL\END"
 
 Cutscene1:
 
-	text "\"Hinokagutsuchi!\" The power of  the divine sword received from  Izanami tears apart demonic force.\END"
+	text "\"Hinokagutsuchi!\" The power of  "
+    text "the divine sword received from  "
+    text "Izanami tears apart demonic     "
+    text "force.\END"
 
 .ends
 
@@ -553,7 +579,9 @@ Cutscene1:
 
 Cutscene2:
 
-    text "Master Loki has been defeated by the likes of you? You and Yumiko will be demon food!\END"
+    text "Master Loki has been defeated by"
+    text "the likes of you? You and       "
+    text "Yumiko will be demon food!\END"
 
 .ends
 
@@ -561,7 +589,11 @@ Cutscene2:
 
 Cutscene3:
 
-    text "To cross the world connecting the good and evil of the Demon World, you will require the power of a demon-beast. Run, Cerberus!\END"
+    text "To cross the world connecting   "
+    text "the good and evil of the Demon  "
+    text "World, you will require the     "
+    text "power of a demon-beast.         "
+    text "Run, Cerberus!\END"
 
 .ends
 
@@ -569,7 +601,9 @@ Cutscene3:
 
 Cutscene4:
 
-    text "The Demon World's assaults are ceaseless! Will Nakajima be able to save Yumiko?\END"
+    text "The Demon World's assaults are  "
+    text "endless! Will Nakajima be able  " 
+    text "to save Yumiko?\END"
 
 .ends
 
@@ -578,7 +612,8 @@ Cutscene4:
 
 Cutscene5:
 
-    text "\"Akemi, I'm entrusting my message to this doll.\"\END"
+    text "\"Akemi, I'm entrusting my       "
+    text "message to this doll.\"\END"
 
 .ends
 
@@ -586,7 +621,11 @@ Cutscene5:
 
 Cutscene6:
 
-    text "\"Impressive, to end up all the way here, but your life shall end here as well.\" The Demon Lord Set's voice echoes in the darkness.\END"
+    text "\"Impressive, to end up all the  "
+    text "way here, but your life shall   "
+    text "end here as well.\"              "
+    text "The Demon Lord Set's voice      "
+    text "echoes in the darkness.\END"    
 
 .ends
 
