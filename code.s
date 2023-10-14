@@ -826,9 +826,7 @@ Yumiko3:
     text "\"Izanami wants me,\\n" 
     text "to be reunited with\\n"
     text "Izanagi's\\n"
-    text "reincarnation --" 
-    text "you.\"\END"
-
+    text "reincarnation--you.\"\\END" 
 
 .ends
 

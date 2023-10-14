@@ -38,7 +38,7 @@ Label `$5080` is the text printing routine
 It loads text data from address stored in `hl`  
 Prints text location based on what's stored in `de` (YYXX Where XX is X position in pixels and YY is line number)  
 Text colour (X) and highlight (Y) based on what's loaded in `b` based on the [MSX colour palette](https://paulwratt.github.io/programmers-palettes/HW-MSX/HW-MSX-palettes.html)
-One line can hold 32 characters  
+In cutscenes, one line can print 32 characters 
 Automatically wraps but no line break  
 Characters for the text are loaded from [the BIOS](https://www.msx.org/wiki/MSX_font) based on their hex value  
 Stops printing text until it sees the `$FF` character
@@ -47,6 +47,7 @@ Stops printing text until it sees the `$FF` character
 Some text will use a pointer table to load its text into `hl`  
 It will also used the fixed value of `de = $10F0` but will call `$59CC`  
 The routine at `$59CC` uses the character value `$FE` as a newline and also centers the text
+Text loaded with this routine can only print 20 characters per line
 
 # Izanami Text
 Visiting a new Izanami shrine displays a text message. After exiting Nakajima's INT stat increases by 1  
