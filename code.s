@@ -337,7 +337,7 @@ HHCTEXT:
 .bank 1
 .slot 3
 .org $11C0
-.section "Load Light World names" overwrite
+.section "Load World names" overwrite
 
     .dw MalkuthL, YesodL, HodL, NetzachL, TipheresL, GeburahL, ChesedL, BinahL, ChokmahL, KetherL, DaathL
 
@@ -364,17 +364,17 @@ HHCTEXT:
 .ends
 
 .bank 13
-.slot 0
-.org $14B8
-.section "Load Dark World names" overwrite
+.slot 5
+.org $14B6
+.section "Load HHC World names" overwrite
 
-    .dw MalkuthD, YesodD, HodD, NetzachD, TipheresD, GeburahD, ChesedD, BinahD, ChokmahD, KetherD, DaathD
+WorldNamesH:    .dw $FFFF, MalkuthH, YesodH, HodH, NetzachH, TipheresH, GeburahH, ChesedH, BinahH, ChokmahH, KetherH, DaathH
 
 .ends
 
 .bank 13
-.slot 0
-.orga $14CE
+.slot 5
+.org $14CE
 .section "Dark World names" overwrite
 
     MalkuthD:   text "MALKUTH\END"
@@ -494,11 +494,11 @@ MapText:
 
 .bank 14
 .slot 2
-.org 1615
+.org $1615
 .section "Go to next SPR (No Map)" overwrite
 
 		ld b, $70
-		ld hl, Goto
+		ld hl, NextSpr
 		ld de, $0178
 		call HHCTEXT
 		ld a, ($D291)
@@ -537,7 +537,7 @@ MapText:
 
 .bank 16
 .slot 5
-.orga $B18A
+.org $118A
 .section "Password Screen" overwrite
 
 Password:
@@ -551,16 +551,32 @@ Password:
 
 .section "HHC Menu Text" overwrite
 
-Files: text "PROGRAMS\END"
-Goto: text "GOTO_NEXT_SPR\END"
-NoComp: text "NO COMPUTER\END"
-NextSpr: text "MAP_NEXT_SPR\END"
-ItemList: text "LIST_ITEMS\END"
-SprsMap: text "MAP_ALL_SPRS\END"
-Pass: text "GET_PASSWORD\END"
-NoMap: text "MAP NOT FOUND\END"
-NoBat: text "BATTERY LOW\END"
-Battery: text "BATTERY LEVEL\END"
+    Files: text "PROGRAMS\END"
+    Goto: text "GOTO_NEXT_SPR\END"
+    NoComp: text "NO COMPUTER\END"
+    NextSpr: text "MAP_NEXT_SPR\END"
+    ItemList: text "LIST_ITEMS\END"
+    SprsMap: text "MAP_ALL_SPRS\END"
+    Pass: text "GET_PASSWORD\END"
+    NoMap: text "MAP NOT FOUND\END"
+    NoBat: text "BATTERY LOW\END"
+    Battery: text "BATTERY LEVEL\END"
+
+.ends
+
+.section "HHC World names" overwrite
+
+    MalkuthH:   text "MALKUTH\END"
+    YesodH:     text "YESOD\END"
+    HodH:       text "HOD\END"
+    NetzachH:   text "NETZACH\END"
+    TipheresH:  text "TIPHERETH\END"
+    GeburahH:   text "GEBURAH\END"
+    ChesedH:    text "CHESED\END"
+    BinahH:     text "BINAH\END"
+    ChokmahH:   text "CHOKMAH\END"
+    KetherH:    text "KETHER\END"
+    DaathH:     text "DAAT\END"
 
 .ends
 
