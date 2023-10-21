@@ -146,10 +146,22 @@
 
 .bank 0
 .slot 2
-.org $07B0
-.section "End Screen load text" overwrite
+.org $0811
+.section "Bad ending load text" overwrite
 
-    ld hl, End
+    ld hl, BadEnd
+    ld de, $1000
+    ld b, $F0
+    call LOADTEXT
+
+.ends
+
+.bank 0
+.slot 2
+.org $07B0
+.section "Good ending load text" overwrite
+
+    ld hl, GoodEnd
     ld de, $1000
     ld b, $F0
     call LOADTEXT
@@ -994,9 +1006,17 @@ Salesman:
 
 .ends
 
-.section "End Screen text" overwrite
+.section "Bad Ending text" overwrite
 
-End:
+BadEnd:
+
+    text "Yumiko turned into dust.\END"
+
+.ends
+
+.section "Good Ending text" overwrite
+
+GoodEnd:
 
     text "The fight is over.\END"
 
@@ -1007,11 +1027,9 @@ End:
 .orga $BFEC
 .section "Start/Continue/Done" overwrite
 
-Menu:
-
-	text "Start\END"
-	text "Continue\END"
-	text "Done\END"
+Start:	    text "Start\END"
+Continue:	text "Continue\END"
+Done:   	text "Done\END"
 	
 .ends
 
