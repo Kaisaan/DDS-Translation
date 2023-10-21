@@ -28,6 +28,26 @@
 
 .incdir ""
 
+.bank 2
+.slot 2
+.org $3CC
+.section "Load Title Screen text" overwrite
+
+		ld a, $04
+		ld ($E002), a
+		ld ($7800), a
+		ld hl, Start
+		ld b, $B0
+		ld de, $1000
+		call LOADTEXT
+		ld hl, Continue
+		ld b, $B0
+		ld de, $1028
+		call LOADTEXT
+		ld hl, $1DAF
+        
+.ends
+
 .bank 0
 .slot 2
 .org $054D

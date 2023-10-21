@@ -49,7 +49,7 @@ Z64Gaming - Title Screen Graphics<br>
 agarpac - Other Graphics<br>
 Sugunii - Special Thanks<br>
 <br>
-Supporters: comrade_hee_ho, seatsafteyswitch, eiowlta, quantumdog, reachforthemoon, naoyatoudou, Scone#6977, amazingcretin, alison1337, liamcarney, theoomslayer, boimses, hiking., xzippyzachx, yoush03<br>
+Supporters: comrade_hee_ho, seatsafteyswitch, eiowlta, quantumdog, reachforthemoon, naoyatoudou, Scone#6977, amazingcretin, alison1337, liamcarney, theoomslayer, boimses, hiking., xzippyzachx, yoush03, lorenzoiscool, Honse, Zooperwoop, Bluerose32<br>
 <br>
 [Classic Persona Modding](https://discord.gg/ahg9gegCcm) - Where I'm able to post progress<br>
 [Romhacking.net](https://discord.gg/uAufcgz) - Where I got a lot of hacking help<br>
