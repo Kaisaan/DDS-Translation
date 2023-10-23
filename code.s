@@ -331,7 +331,7 @@ HHCTEXT:
 
     ld hl, Salesman
     ld b, $70
-    ld de, $1020
+    ld de, $1000
     call LOADTEXT
 
 .ends
@@ -384,13 +384,13 @@ HHCTEXT:
     YesodL:     text "YESOD\END"
     HodL:       text "HOD\END"
     NetzachL:   text "NETZACH\END"
-    TipheresL:  text "TIPHERETH\END"
+    TipheresL:  text "TIFERETH\END"
     GeburahL:   text "GEBURAH\END"
     ChesedL:    text "CHESED\END"
     BinahL:     text "BINAH\END"
     ChokmahL:   text "CHOKMAH\END"
     KetherL:    text "KETHER\END"
-    DaathL:     text "DAAT\END"
+    DaathL:     text "DA'AT\END"
 
 
 .ends
@@ -413,13 +413,13 @@ WorldNamesH:    .dw $FFFF, MalkuthH, YesodH, HodH, NetzachH, TipheresH, GeburahH
     YesodD:     text "YESOD\END"
     HodD:       text "HOD\END"
     NetzachD:   text "NETZACH\END"
-    TipheresD:  text "TIPHERETH\END"
+    TipheresD:  text "TIFERETH\END"
     GeburahD:   text "GEBURAH\END"
     ChesedD:    text "CHESED\END"
     BinahD:     text "BINAH\END"
     ChokmahD:   text "CHOKMAH\END"
     KetherD:    text "KETHER\END"
-    DaathD:     text "DAAT\END"
+    DaathD:     text "DA'AT\END"
 
 .ends
 
@@ -1022,7 +1022,7 @@ Yumiko16:
 
 Salesman:
 
-    text "\"Want to buy something?\"\END"
+    text  "\"Buying anything?\"\END"
 
 .ends
 
