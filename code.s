@@ -1,6 +1,5 @@
 .memorymap
     defaultslot 0
-
     slotsize $2000
     slot 0 $0000
     slot 1 $2000
@@ -30,7 +29,7 @@
 
 .bank 2
 .slot 2
-.org $3CC
+.org $03CC
 .section "Load Title Screen text" overwrite
 
 	ld a, $04
@@ -112,10 +111,6 @@
 	ld hl, Cutscene4
 	call LOADTEXT
 	.ds 11, $00
-    ld hl, $2920
-    ld a, $88
-    call $004D
-	ret
 
 .ends
 
@@ -132,13 +127,6 @@
 	ld hl, Cutscene5
 	call LOADTEXT
 	.ds 11, $00
-    ld hl, $0000
-	ld ($D414), hl
-	ld a, $08
-	ld ($D6AC), a
-	ld a, $01
-	ld ($D6FE), a
-	ret
 
 .ends
 
@@ -146,6 +134,7 @@
 .slot 2
 .org $0723
 .section "Cutscene 6 load text" overwrite
+
 	ld de, $1100
 	ld b, $F1
 	ld a, $0D
@@ -154,13 +143,6 @@
 	ld hl, Cutscene6
 	call LOADTEXT
     .ds 22, $00
-	ld hl, $0000
-	ld ($D414), hl
-	ld a, $08
-	ld ($D6AC), a
-	ld a, $01
-	ld ($D6FE), a
-	ret
 
 .ends
 
@@ -392,7 +374,6 @@ HHCTEXT:
     KetherL:    text "KETHER\END"
     DaathL:     text "DA'AT\END"
 
-
 .ends
 
 .bank 13
@@ -446,8 +427,6 @@ WorldNamesH:    .dw $FFFF, MalkuthH, YesodH, HodH, NetzachH, TipheresH, GeburahH
 	ld hl, NoComp
 	ld de, $0330
 	call HHCTEXT
-	jp $94D7
-	
 LABEL1D7FC:	
 	ld a, ($D7A4)
 	or a
@@ -459,8 +438,6 @@ LABEL1D7FC:
 	ld hl, NoBat
 	ld de, $0330
 	call HHCTEXT
-	jp $94D7
-	
 LABEL1D816:	
 	dec a
 	ld ($D280), a
@@ -483,7 +460,6 @@ LABEL1D81F:
 	ld hl, Pass
 	ld de, $0A90
 	call HHCTEXT
-	jp $94D7
 
 .ends
 
@@ -568,11 +544,9 @@ MapText:    text "From    to   \END"
 .org $118A
 .section "Password Screen" overwrite
 
-Password:
-
-	.db $01 $00 $05 $01 $04 $01 $03 $01 $02 $01 $01 $01 $01 $02 $01 $03 $01 $04 $01 $05
-	text "Password\END"
-	.db $F4 $20 $F5 $20 $F6 $20 $20 $20 $F7 $FF
+PasswordScreen1:    .db $01 $00 $05 $01 $04 $01 $03 $01 $02 $01 $01 $01 $01 $02 $01 $03 $01 $04 $01 $05
+Password:	        text "Password\END"
+PasswordScreen2:    .db $F4 $20 $F5 $20 $F6 $20 $20 $20 $F7 $FF
     .db $91 $92 $93 $94 $95 $00 $EA $EB $EC $ED $EE $96 $97 $98 $99 $9A $00 $EF $F0 $F1 $F2 $F3 $9B $9C $9D $9E $9F $00 $F7 $F8 $F9 $FA $FB $E0 $E1 $E2 $E3 $E4 $00 $F4 $F5 $F6 $00 $FE $E5 $E6 $E7 $E8 $E9 $00 $FF
 
 .ends
@@ -1062,7 +1036,6 @@ LABEL5080:
 	cp $5B
 	jr c, LABEL508C
 	ld c, $01
-	
 LABEL508C:
 	inc hl
 	push bc
@@ -1076,7 +1049,6 @@ LABEL508C:
 	pop hl
 	pop bc
 	jr LABEL5080
-
 LABEL509D:
 	push de
 	push bc
@@ -1089,7 +1061,6 @@ LABEL509D:
 	add hl, de
 	ld b, $08
 	ld de, $D62B
-	
 LABEL50AE:
 	ld a, (hl)
 	inc hl
@@ -1103,7 +1074,6 @@ LABEL50AE:
 	jr nz, LABEL50C7
 	ld b, $08
 	ld hl, $D62B
-	
 LABEL50BF:
 	ld a, (hl)
 	srl a
@@ -1111,7 +1081,6 @@ LABEL50BF:
 	ld (hl), a
 	inc hl
 	djnz LABEL50BF
-	
 LABEL50C7:
 	pop bc
 	pop de
@@ -1145,7 +1114,6 @@ LABEL59CF:
 	inc c
 	inc hl
 	jr LABEL59CF
-
 LABEL59D8:
 	srl c
 	ld a, c
@@ -1186,7 +1154,6 @@ LABEL1DC5D:
 	pop hl
 	pop bc
 	jr LABEL1DC51
-	
 LABEL1DC6E:	
 	push de
 	push bc
