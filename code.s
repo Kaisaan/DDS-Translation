@@ -38,11 +38,11 @@
 	ld hl, Start
 	ld b, $B0
 	ld de, $1000
-	call LOADTEXT
+	call LoadText
 	ld hl, Continue
 	ld b, $B0
 	ld de, $1028
-	call LOADTEXT
+	call LoadText
 	ld hl, $1DAF
         
 .ends
@@ -58,7 +58,7 @@
 	ld ($E002), a
 	ld ($7800), a
 	ld hl, Cutscene1
-	call LOADTEXT
+	call LoadText
 	.ds 11, $00
 	ret
 
@@ -75,7 +75,7 @@
 	ld ($E002), a
 	ld ($7800), a
 	ld hl, Cutscene2
-	call LOADTEXT
+	call LoadText
 	.ds 11, $00
 	ret
 
@@ -92,7 +92,7 @@
 	ld ($E002), a
 	ld ($7800), a
 	ld hl, Cutscene3
-	call LOADTEXT
+	call LoadText
 	.ds 22, $00
 	ret
 
@@ -109,7 +109,7 @@
 	ld ($E002), a
 	ld ($7800), a
 	ld hl, Cutscene4
-	call LOADTEXT
+	call LoadText
 	.ds 11, $00
 
 .ends
@@ -125,7 +125,7 @@
 	ld ($E002), a
 	ld ($7800), a
 	ld hl, Cutscene5
-	call LOADTEXT
+	call LoadText
 	.ds 11, $00
 
 .ends
@@ -141,7 +141,7 @@
 	ld ($E002), a
 	ld ($7800), a
 	ld hl, Cutscene6
-	call LOADTEXT
+	call LoadText
     .ds 22, $00
 
 .ends
@@ -154,7 +154,7 @@
     ld hl, BadEnd
     ld de, $1000
     ld b, $F0
-    call LOADTEXT
+    call LoadText
 
 .ends
 
@@ -166,7 +166,7 @@
     ld hl, GoodEnd
     ld de, $1000
     ld b, $F0
-    call LOADTEXT
+    call LoadText
 
 .ends
 
@@ -175,7 +175,7 @@
 .org $06B9
 .section "Combat Log" overwrite
 
-COMBAT:	
+Combat:	
 
 	text "SPOTTED \END"
     text "DAMAGE\END"
@@ -209,7 +209,7 @@ Error:
 .org $1080
 .section "Text routine" overwrite
 
-LOADTEXT:
+LoadText:
 
 	ld a, ($E002)
 	push af
@@ -231,7 +231,7 @@ LOADTEXT:
 .org $19CC
 .section "Center Text" overwrite
 
-CENTERTEXT:
+CenterText:
 
 	ld a, ($E002)
 	push af
@@ -253,7 +253,7 @@ CENTERTEXT:
 .org $1C51
 .section "HHC Text" overwrite
 
-HHCTEXT:
+HHCText:
 
 	ld a, ($E002)
 	push af
@@ -314,7 +314,7 @@ HHCTEXT:
     ld hl, Salesman
     ld b, $70
     ld de, $1000
-    call LOADTEXT
+    call LoadText
 
 .ends
 
@@ -325,7 +325,7 @@ HHCTEXT:
 
 	ld de, $10F0
 	push de
-	call CENTERTEXT
+	call CenterText
 .ends
 
 .bank 13
@@ -412,21 +412,21 @@ WorldNamesH:    .dw $FFFF, MalkuthH, YesodH, HodH, NetzachH, TipheresH, GeburahH
 	ld b, $F0
 	ld hl, Files
 	ld de, $00C0
-	call HHCTEXT
+	call HHCText
 	call $9BBF
 	xor a
 	ld ($D6FD), a
 	ld b, $80
 	ld hl, Goto
 	ld de, $01F0
-	call HHCTEXT
+	call HHCText
 	ld a, ($D28A)
 	or a
 	jr nz, LABEL1D7FC
 	ld b, $E8
 	ld hl, NoComp
 	ld de, $0330
-	call HHCTEXT
+	call HHCText
 LABEL1D7FC:	
 	ld a, ($D7A4)
 	or a
@@ -437,7 +437,7 @@ LABEL1D7FC:
 	ld b, $E8
 	ld hl, NoBat
 	ld de, $0330
-	call HHCTEXT
+	call HHCText
 LABEL1D816:	
 	dec a
 	ld ($D280), a
@@ -447,19 +447,19 @@ LABEL1D81F:
 	ld b, $70
 	ld hl, NextSpr
 	ld de, $0330
-	call HHCTEXT
+	call HHCText
 	ld b, $70
 	ld hl, ItemList
 	ld de, $0810
-	call HHCTEXT
+	call HHCText
 	ld b, $70
 	ld hl, SprsMap
 	ld de, $0950
-	call HHCTEXT
+	call HHCText
 	ld b, $70
 	ld hl, Pass
 	ld de, $0A90
-	call HHCTEXT
+	call HHCText
 
 .ends
 
@@ -480,7 +480,7 @@ MapText:    text "From    to   \END"
 	ld b, $70
 	ld hl, Battery
 	ld de, $1298
-	call HHCTEXT
+	call HHCText
 
 .ends
 
@@ -492,7 +492,7 @@ MapText:    text "From    to   \END"
 	ld b, $70
 	ld hl, Pass
 	ld de, $02A8
-	call HHCTEXT
+	call HHCText
 
 .ends
 
@@ -504,14 +504,14 @@ MapText:    text "From    to   \END"
 	ld b, $70
 	ld hl, NextSpr
 	ld de, $0178
-	call HHCTEXT
+	call HHCText
 	ld a, ($D291)
 	or a
 	.db $20 $0E
 	ld b, $E8
 	ld hl, NoMap
 	ld de, $03F8
-	call HHCTEXT
+	call HHCText
 
 .ends
 
@@ -520,10 +520,10 @@ MapText:    text "From    to   \END"
 .org $1AAA
 .section "Item List text" overwrite
 	
-        ld b, $70
+    ld b, $70
 	ld hl, ItemList
 	ld de, $00D0
-	call HHCTEXT
+	call HHCText
 
 .ends
 
@@ -535,7 +535,7 @@ MapText:    text "From    to   \END"
 	ld b, $70
 	ld hl, SprsMap
 	ld de, $00C8
-	call HHCTEXT
+	call HHCText
 
 .ends
 
@@ -544,9 +544,9 @@ MapText:    text "From    to   \END"
 .org $118A
 .section "Password Screen" overwrite
 
-PasswordScreen1:    .db $01 $00 $05 $01 $04 $01 $03 $01 $02 $01 $01 $01 $01 $02 $01 $03 $01 $04 $01 $05
-Password:	        text "Password\END"
-PasswordScreen2:    .db $F4 $20 $F5 $20 $F6 $20 $20 $20 $F7 $FF
+    PasswordScreen1:    .db $01 $00 $05 $01 $04 $01 $03 $01 $02 $01 $01 $01 $01 $02 $01 $03 $01 $04 $01 $05
+    Password:	        text "Password\END"
+    PasswordScreen2:    .db $F4 $20 $F5 $20 $F6 $20 $20 $20 $F7 $FF
     .db $91 $92 $93 $94 $95 $00 $EA $EB $EC $ED $EE $96 $97 $98 $99 $9A $00 $EF $F0 $F1 $F2 $F3 $9B $9C $9D $9E $9F $00 $F7 $F8 $F9 $FA $FB $E0 $E1 $E2 $E3 $E4 $00 $F4 $F5 $F6 $00 $FE $E5 $E6 $E7 $E8 $E9 $00 $FF
 
 .ends
