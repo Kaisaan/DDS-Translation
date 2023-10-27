@@ -33,18 +33,18 @@
 .org $3CC
 .section "Load Title Screen text" overwrite
 
-		ld a, $04
-		ld ($E002), a
-		ld ($7800), a
-		ld hl, Start
-		ld b, $B0
-		ld de, $1000
-		call LOADTEXT
-		ld hl, Continue
-		ld b, $B0
-		ld de, $1028
-		call LOADTEXT
-		ld hl, $1DAF
+	ld a, $04
+	ld ($E002), a
+	ld ($7800), a
+	ld hl, Start
+	ld b, $B0
+	ld de, $1000
+	call LOADTEXT
+	ld hl, Continue
+	ld b, $B0
+	ld de, $1028
+	call LOADTEXT
+	ld hl, $1DAF
         
 .ends
 
@@ -146,21 +146,21 @@
 .slot 2
 .org $0723
 .section "Cutscene 6 load text" overwrite
-		ld de, $1100
-		ld b, $F1
-		ld a, $0D
-		ld ($E002), a
-		ld ($7800), a
-		ld hl, Cutscene6
-		call LOADTEXT
-        .ds 22, $00
-		ld hl, $0000
-		ld ($D414), hl
-		ld a, $08
-		ld ($D6AC), a
-		ld a, $01
-		ld ($D6FE), a
-		ret
+	ld de, $1100
+	ld b, $F1
+	ld a, $0D
+	ld ($E002), a
+	ld ($7800), a
+	ld hl, Cutscene6
+	call LOADTEXT
+    .ds 22, $00
+	ld hl, $0000
+	ld ($D414), hl
+	ld a, $08
+	ld ($D6AC), a
+	ld a, $01
+	ld ($D6FE), a
+	ret
 
 .ends
 
@@ -224,7 +224,7 @@ Error:
 
 .bank 2
 .slot 4
-.orga $9080
+.org $1080
 .section "Text routine" overwrite
 
 LOADTEXT:
@@ -246,7 +246,7 @@ LOADTEXT:
 
 .bank 2
 .slot 4
-.orga $99CC
+.org $19CC
 .section "Center Text" overwrite
 
 CENTERTEXT:
@@ -268,7 +268,7 @@ CENTERTEXT:
 
 .bank 14
 .slot 4
-.orga $9C51
+.org $1C51
 .section "HHC Text" overwrite
 
 HHCTEXT:
@@ -290,7 +290,7 @@ HHCTEXT:
 
 .bank 4
 .slot 6
-.orga $DE50
+.org $1E50
 .section "Title 1 Image" overwrite
 
     .INCBIN	"title1.bin" READ 256
@@ -299,7 +299,7 @@ HHCTEXT:
 
 .bank 12
 .slot 5
-.org $A80
+.org $0A80
 .section "Title 2 Image" overwrite
 
     .INCBIN	"title2.bin" READ 1176
@@ -326,7 +326,7 @@ HHCTEXT:
 
 .bank 2
 .slot 4
-.orga $9ABB
+.org $1ABB
 .section "Load Salesman Text" overwrite
 
     ld hl, Salesman
@@ -428,62 +428,62 @@ WorldNamesH:    .dw $FFFF, MalkuthH, YesodH, HodH, NetzachH, TipheresH, GeburahH
 .org $17CB
 .section "Load HHC Text" overwrite
 
-		ld b, $F0
-		ld hl, Files
-		ld de, $00C0
-		call HHCTEXT
-		call $9BBF
-		xor a
-		ld ($D6FD), a
-		ld b, $80
-		ld hl, Goto
-		ld de, $01F0
-		call HHCTEXT
-		ld a, ($D28A)
-		or a
-		jr nz, LABEL1D7FC
-		ld b, $E8
-		ld hl, NoComp
-		ld de, $0330
-		call HHCTEXT
-		jp $94D7
+	ld b, $F0
+	ld hl, Files
+	ld de, $00C0
+	call HHCTEXT
+	call $9BBF
+	xor a
+	ld ($D6FD), a
+	ld b, $80
+	ld hl, Goto
+	ld de, $01F0
+	call HHCTEXT
+	ld a, ($D28A)
+	or a
+	jr nz, LABEL1D7FC
+	ld b, $E8
+	ld hl, NoComp
+	ld de, $0330
+	call HHCTEXT
+	jp $94D7
 	
 LABEL1D7FC:	
-		ld a, ($D7A4)
-		or a
-		jr nz, LABEL1D81F
-		ld a, ($D280)
-		or a
-		jr nz, LABEL1D816
-		ld b, $E8
-		ld hl, NoBat
-		ld de, $0330
-		call HHCTEXT
-		jp $94D7
+	ld a, ($D7A4)
+	or a
+	jr nz, LABEL1D81F
+	ld a, ($D280)
+	or a
+	jr nz, LABEL1D816
+	ld b, $E8
+	ld hl, NoBat
+	ld de, $0330
+	call HHCTEXT
+	jp $94D7
 	
 LABEL1D816:	
-		dec a
-		ld ($D280), a
-		ld a, $10
-		ld ($D7A4), a
+	dec a
+	ld ($D280), a
+	ld a, $10
+	ld ($D7A4), a
 LABEL1D81F:	
-		ld b, $70
-		ld hl, NextSpr
-		ld de, $0330
-		call HHCTEXT
-		ld b, $70
-		ld hl, ItemList
-		ld de, $0810
-		call HHCTEXT
-		ld b, $70
-		ld hl, SprsMap
-		ld de, $0950
-		call HHCTEXT
-		ld b, $70
-		ld hl, Pass
-		ld de, $0A90
-		call HHCTEXT
-		jp $94D7
+	ld b, $70
+	ld hl, NextSpr
+	ld de, $0330
+	call HHCTEXT
+	ld b, $70
+	ld hl, ItemList
+	ld de, $0810
+	call HHCTEXT
+	ld b, $70
+	ld hl, SprsMap
+	ld de, $0950
+	call HHCTEXT
+	ld b, $70
+	ld hl, Pass
+	ld de, $0A90
+	call HHCTEXT
+	jp $94D7
 
 .ends
 
@@ -492,11 +492,7 @@ LABEL1D81F:
 .org $19DF
 .section "Map text" overwrite 
 
-MapText: 
-    text "From"
-    .db $20 $20 $20 $20
-    text "to"
-    .db $20 $20 $20 $FF
+MapText:    text "From    to   \END"
 
 .ends
 
@@ -505,10 +501,10 @@ MapText:
 .org $1BBF
 .section "Battery Text" overwrite
 
-		ld b, $70
-		ld hl, Battery
-		ld de, $1298
-		call HHCTEXT
+	ld b, $70
+	ld hl, Battery
+	ld de, $1298
+	call HHCTEXT
 
 .ends
 
@@ -517,10 +513,10 @@ MapText:
 .org $15D3
 .section "HHC Password Text" overwrite
 
-		ld b, $70
-		ld hl, Pass
-		ld de, $02A8
-		call HHCTEXT
+	ld b, $70
+	ld hl, Pass
+	ld de, $02A8
+	call HHCTEXT
 
 .ends
 
@@ -529,17 +525,17 @@ MapText:
 .org $1615
 .section "Go to next SPR (No Map)" overwrite
 
-		ld b, $70
-		ld hl, NextSpr
-		ld de, $0178
-		call HHCTEXT
-		ld a, ($D291)
-		or a
-		.db $20 $0E
-		ld b, $E8
-		ld hl, NoMap
-		ld de, $03F8
-		call HHCTEXT
+	ld b, $70
+	ld hl, NextSpr
+	ld de, $0178
+	call HHCTEXT
+	ld a, ($D291)
+	or a
+	.db $20 $0E
+	ld b, $E8
+	ld hl, NoMap
+	ld de, $03F8
+	call HHCTEXT
 
 .ends
 
@@ -547,11 +543,11 @@ MapText:
 .slot 2
 .org $1AAA
 .section "Item List text" overwrite
-		
+	
         ld b, $70
-		ld hl, ItemList
-		ld de, $00D0
-		call HHCTEXT
+	ld hl, ItemList
+	ld de, $00D0
+	call HHCTEXT
 
 .ends
 
@@ -560,10 +556,10 @@ MapText:
 .org $195D
 .section "Map Title Text" overwrite
 
-		ld b, $70
-		ld hl, SprsMap
-		ld de, $00C8
-		call HHCTEXT
+	ld b, $70
+	ld hl, SprsMap
+	ld de, $00C8
+	call HHCTEXT
 
 .ends
 
@@ -577,7 +573,7 @@ Password:
 	.db $01 $00 $05 $01 $04 $01 $03 $01 $02 $01 $01 $01 $01 $02 $01 $03 $01 $04 $01 $05
 	text "Password\END"
 	.db $F4 $20 $F5 $20 $F6 $20 $20 $20 $F7 $FF
-.db $91 $92 $93 $94 $95 $00 $EA $EB $EC $ED $EE $96 $97 $98 $99 $9A $00 $EF $F0 $F1 $F2 $F3 $9B $9C $9D $9E $9F $00 $F7 $F8 $F9 $FA $FB $E0 $E1 $E2 $E3 $E4 $00 $F4 $F5 $F6 $00 $FE $E5 $E6 $E7 $E8 $E9 $00 $FF $00 $00 $00 $00
+    .db $91 $92 $93 $94 $95 $00 $EA $EB $EC $ED $EE $96 $97 $98 $99 $9A $00 $EF $F0 $F1 $F2 $F3 $9B $9C $9D $9E $9F $00 $F7 $F8 $F9 $FA $FB $E0 $E1 $E2 $E3 $E4 $00 $F4 $F5 $F6 $00 $FE $E5 $E6 $E7 $E8 $E9 $00 $FF
 
 .ends
 
@@ -1044,7 +1040,7 @@ GoodEnd:
 
 .bank 16
 .slot 5
-.orga $BFEC
+.org $1FEC
 .section "Start/Continue/Done" overwrite
 
 Start:	    text "Start\END"
@@ -1055,7 +1051,7 @@ Done:   	text "Done\END"
 
 .bank 16
 .slot 5
-.orga $A000
+.org $0000
 .section "New Writing routine" overwrite
 
 LABEL5080:
@@ -1123,7 +1119,7 @@ LABEL50C7:
 	push de
 	ld hl, $D62B
 	ld bc, $0008
-	call LABEL005C
+	call $005C
 	pop de
 	pop bc
 	ld a, b
@@ -1132,43 +1128,7 @@ LABEL50C7:
 	ld bc, $2000
 	add hl, bc
 	ld bc, $0008
-	call LABEL0056
-	ret
-	
-LABEL005C:
-	ex de, hl
-	call LABEL07DF
-	ld a, (de)
-	out ($98), a
-	inc de
-	dec bc
-	ld a, c
-	or b
-	jr nz, $F7
-	ret
-	
-LABEL0056:
-	push af
-	call LABEL07DF
-	pop af
-	out ($98), a
-	push af
-	dec bc
-	ld a, c
-	or b
-	jr nz, $F7
-	pop af
-	ret
-	
-LABEL07DF:
-	ld a, l
-	di
-	out ($99), a
-	ld a, h
-	and $3F
-	or $40
-	out ($99), a
-	ei
+	call $0056
 	ret
 	
 .ends
@@ -1206,76 +1166,76 @@ LABEL59D8:
 .section "Print HHC Text" overwrite
 
 LABEL1DC51:	
-		ld a, (hl)
-		cp $FE
-		ret nc
-		ld c, $00
-		cp $5B
-		jr c, LABEL1DC5D
-		ld c, $01
+	ld a, (hl)
+	cp $FE
+	ret nc
+	ld c, $00
+	cp $5B
+	jr c, LABEL1DC5D
+	ld c, $01
 LABEL1DC5D:	
-		inc hl
-		push bc
-		push hl
-		push de
-		call LABEL1DC6E
-		pop de
-		ld hl, $0008
-		add hl, de
-		ex de, hl
-		pop hl
-		pop bc
-		jr LABEL1DC51
+	inc hl
+	push bc
+	push hl
+	push de
+	call LABEL1DC6E
+	pop de
+	ld hl, $0008
+	add hl, de
+	ex de, hl
+	pop hl
+	pop bc
+	jr LABEL1DC51
 	
 LABEL1DC6E:	
-		push de
-		push bc
-		ld l, a
-		ld h, $00
-		add hl, hl
-		add hl, hl
-		add hl, hl
-		ld de, $1BBF
-		add hl, de
-		ld b, $08
-		ld de, $D62B
+	push de
+	push bc
+	ld l, a
+	ld h, $00
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	ld de, $1BBF
+	add hl, de
+	ld b, $08
+	ld de, $D62B
 LABEL1DC7F:	
-		ld a, (hl)
-		inc hl
-		ld (de), a
-		inc de
-		djnz LABEL1DC7F
-		pop bc
-		push bc
-		ld a, c
-		or a
-		jr nz, LABEL1DC98
-		ld b, $08
-		ld hl, $D62B
+	ld a, (hl)
+	inc hl
+	ld (de), a
+	inc de
+	djnz LABEL1DC7F
+	pop bc
+	push bc
+	ld a, c
+	or a
+	jr nz, LABEL1DC98
+	ld b, $08
+	ld hl, $D62B
 LABEL1DC90:	
-		ld a, (hl)
-		srl a
-		or (hl)
-		ld (hl), a
-		inc hl
-		djnz LABEL1DC90
+	ld a, (hl)
+	srl a
+	or (hl)
+	ld (hl), a
+	inc hl
+	djnz LABEL1DC90
 LABEL1DC98:	
-		pop bc
-		pop de
-		push bc
-		push de
-		ld hl, $D62B
-		ld bc, $0008
-		call $005C
-		pop de
-		pop bc
-		ld a, b
-		cp $FF
-		ret z
-		ld bc, $2000
-		add hl, bc
-		ld bc, $0008
-		call $0056
-		ret
+	pop bc
+	pop de
+	push bc
+	push de
+	ld hl, $D62B
+	ld bc, $0008
+	call $005C
+	pop de
+	pop bc
+	ld a, b
+	cp $FF
+	ret z
+	ld bc, $2000
+	add hl, bc
+	ld bc, $0008
+	call $0056
+	ret
 
 .ends
