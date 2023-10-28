@@ -187,9 +187,7 @@ Combat:
 .org $05E9
 .section "Telenet text" overwrite
 
-Telenet:
-
-    text "Presented by Telenet\END"
+Telenet:    text "Presented by Telenet\END"
 
 .ends
 
@@ -198,9 +196,52 @@ Telenet:
 .org $0D8D 
 .section "Password Error" overwrite
 
-Error:
+Error:      text "Password Error\END"
 
-    text "Password Error\END"
+.ends
+
+.bank 2
+.slot 4
+.org $084A
+.section "Load Password Screen text" overwrite
+
+	ld b, $80
+	ld hl, Password
+	ld a, $0D
+	ld ($E002), a
+	ld ($7800), a
+	ld de, $0080
+	call LoadText
+
+.ends
+
+.bank 2
+.slot 4
+.org $087D
+.section "Load Password Screen" overwrite
+
+	ld b, $F0
+	ld a, $0D
+	ld ($E002), a
+	ld ($7800), a
+	ld hl, PasswordScreen1
+	ld de, $1188
+	call LoadText
+
+.ends
+
+.bank 2
+.slot 4
+.org $08A4
+.section "Done text" overwrite
+
+	ld b, $B0
+	ld a, $04
+	ld ($E002), a
+	ld ($7800), a
+	ld hl, Done
+	ld de, $1388
+	call LoadText
 
 .ends
 
@@ -326,6 +367,7 @@ HHCText:
 	ld de, $10F0
 	push de
 	call CenterText
+
 .ends
 
 .bank 13
@@ -381,7 +423,7 @@ HHCText:
 .org $14B6
 .section "Load HHC World names" overwrite
 
-WorldNamesH:    .dw $FFFF, MalkuthH, YesodH, HodH, NetzachH, TipheresH, GeburahH, ChesedH, BinahH, ChokmahH, KetherH, DaathH
+    .dw $FFFF, MalkuthH, YesodH, HodH, NetzachH, TipheresH, GeburahH, ChesedH, BinahH, ChokmahH, KetherH, DaathH
 
 .ends
 
@@ -541,12 +583,11 @@ MapText:    text "From    to   \END"
 
 .bank 16
 .slot 5
-.org $118A
+.org $0000
 .section "Password Screen" overwrite
 
-    PasswordScreen1:    .db $01 $00 $05 $01 $04 $01 $03 $01 $02 $01 $01 $01 $01 $02 $01 $03 $01 $04 $01 $05
-    Password:	        text "Password\END"
-    PasswordScreen2:    .db $F4 $20 $F5 $20 $F6 $20 $20 $20 $F7 $FF
+    Password:           text "Password\END"
+    PasswordScreen1:    .db $F4 $20 $F5 $20 $F6 $20 $20 $20 $F7 $FF
     .db $91 $92 $93 $94 $95 $00 $EA $EB $EC $ED $EE $96 $97 $98 $99 $9A $00 $EF $F0 $F1 $F2 $F3 $9B $9C $9D $9E $9F $00 $F7 $F8 $F9 $FA $FB $E0 $E1 $E2 $E3 $E4 $00 $F4 $F5 $F6 $00 $FE $E5 $E6 $E7 $E8 $E9 $00 $FF
 
 .ends
@@ -757,7 +798,6 @@ Izanami11:
     text "become the sides\\n"
     text "of a mirror.\END"
 
-
 .ends
 
 .section "Izanami 12 text" overwrite
@@ -768,7 +808,6 @@ Izanami12:
     text "dark mage's garden\\n"
     text "with a holy\\n"
     text "talisman.\END"
-
 
 .ends
 
@@ -990,31 +1029,22 @@ Yumiko16:
 
 .section "Salesman text" overwrite
 
-Salesman:
-
-    text  "\"Buying anything?\"\END"
+Salesman:   text "\"Buying anything?\"\END"
 
 .ends
 
 .section "Bad Ending text" overwrite
 
-BadEnd:
-
-    text "Yumiko turned into dust.\END"
+BadEnd:     text "Yumiko turned into dust.\END"
 
 .ends
 
 .section "Good Ending text" overwrite
 
-GoodEnd:
-
-    text "The fight is over.\END"
+GoodEnd:    text "The fight is over.\END"
 
 .ends
 
-.bank 16
-.slot 5
-.org $1FEC
 .section "Start/Continue/Done" overwrite
 
 Start:	    text "Start\END"
@@ -1023,9 +1053,6 @@ Done:   	text "Done\END"
 	
 .ends
 
-.bank 16
-.slot 5
-.org $0000
 .section "New Writing routine" overwrite
 
 LABEL5080:
