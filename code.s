@@ -175,8 +175,6 @@
 .org $06B9
 .section "Combat Log" overwrite
 
-Combat:	
-
 	text "SPOTTED \END"
     text "DAMAGE\END"
 
@@ -469,6 +467,7 @@ HHCText:
 	ld hl, NoComp
 	ld de, $0330
 	call HHCText
+    jp $94D7
 LABEL1D7FC:	
 	ld a, ($D7A4)
 	or a
@@ -480,6 +479,7 @@ LABEL1D7FC:
 	ld hl, NoBat
 	ld de, $0330
 	call HHCText
+    jp $94D7
 LABEL1D816:	
 	dec a
 	ld ($D280), a
@@ -533,7 +533,7 @@ MapText:    text "From    to   \END"
 
 	ld b, $70
 	ld hl, Pass
-	ld de, $02A8
+	ld de, $02A0
 	call HHCText
 
 .ends
@@ -545,14 +545,14 @@ MapText:    text "From    to   \END"
 
 	ld b, $70
 	ld hl, NextSpr
-	ld de, $0178
+	ld de, $0160
 	call HHCText
 	ld a, ($D291)
 	or a
 	.db $20 $0E
 	ld b, $E8
 	ld hl, NoMap
-	ld de, $03F8
+	ld de, $03E0
 	call HHCText
 
 .ends
@@ -564,7 +564,7 @@ MapText:    text "From    to   \END"
 	
     ld b, $70
 	ld hl, ItemList
-	ld de, $00D0
+	ld de, $00C8
 	call HHCText
 
 .ends
@@ -576,7 +576,7 @@ MapText:    text "From    to   \END"
 
 	ld b, $70
 	ld hl, SprsMap
-	ld de, $00C8
+	ld de, $00C0
 	call HHCText
 
 .ends
