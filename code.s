@@ -200,6 +200,15 @@ Error:      text "Password Error\END"
 
 .bank 2
 .slot 4
+.org $1D60
+.section "Exit Salesman text" overwrite
+
+Exit:       text "Exit\END"
+
+.ends
+
+.bank 2
+.slot 4
 .org $084A
 .section "Load Password Screen text" overwrite
 
@@ -222,7 +231,7 @@ Error:      text "Password Error\END"
 	ld a, $0D
 	ld ($E002), a
 	ld ($7800), a
-	ld hl, PasswordScreen1
+	ld hl, PasswordScreen
 	ld de, $1188
 	call LoadText
 
@@ -352,7 +361,7 @@ HHCText:
 
     ld hl, Salesman
     ld b, $70
-    ld de, $1000
+    ld de, $1008
     call LoadText
 
 .ends
@@ -451,7 +460,7 @@ HHCText:
 
 	ld b, $F0
 	ld hl, Files
-	ld de, $00C0
+	ld de, $00B0
 	call HHCText
 	call $9BBF
 	xor a
@@ -587,7 +596,7 @@ MapText:    text "From    to   \END"
 .section "Password Screen" overwrite
 
     Password:           text "Password\END"
-    PasswordScreen1:    .db $F4 $20 $F5 $20 $F6 $20 $20 $20 $F7 $FF
+    PasswordScreen:    .db $F4 $20 $F5 $20 $F6 $20 $20 $20 $F7 $FF
     .db $91 $92 $93 $94 $95 $00 $EA $EB $EC $ED $EE $96 $97 $98 $99 $9A $00 $EF $F0 $F1 $F2 $F3 $9B $9C $9D $9E $9F $00 $F7 $F8 $F9 $FA $FB $E0 $E1 $E2 $E3 $E4 $00 $F4 $F5 $F6 $00 $FE $E5 $E6 $E7 $E8 $E9 $00 $FF
 
 .ends
