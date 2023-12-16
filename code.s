@@ -12,7 +12,7 @@
 .endme
 
 .rombanksize $2000
-.rombanks 32
+.rombanks 17
 
 .stringmaptable mainFontMap "DDSMT.tbl"
 
@@ -170,16 +170,6 @@
 
 .ends
 
-.bank 1
-.slot 3
-.org $06B9
-.section "Combat Log" overwrite
-
-	text "SPOTTED \END"
-    text "DAMAGE\END"
-
-.ends
-
 .bank 2
 .slot 4
 .org $05E9
@@ -309,6 +299,27 @@ HHCText:
 	ld ($E002), a
 	ld ($7800), a
 	call LABEL1DC51
+	ld b, a
+	pop af
+	ld ($E002), a
+	ld ($7800), a
+	ld a, b
+	ret
+	
+.ends
+
+.bank 1
+.slot 3
+.org $1492
+.section "Combat Log Text load" overwrite
+
+CombatLogText:
+	ld a, ($E002)
+	push af
+	ld a, :LABEL3492
+	ld ($E002), a
+	ld ($7800), a
+	call LABEL3492
 	ld b, a
 	pop af
 	ld ($E002), a
@@ -587,6 +598,78 @@ MapText:    text "From    to   \END"
 	ld hl, SprsMap
 	ld de, $00C0
 	call HHCText
+
+.ends
+
+
+
+.bank 0
+.slot 2
+.org $11B8
+.section "Load Combat Log text 1" overwrite
+
+	ld de, Potion
+	call CombatLogText
+
+.ends
+
+.bank 0
+.slot 2
+.org $11CF
+.section "Load Combat Log text 2" overwrite
+
+	ld de, Item
+	call CombatLogText
+
+.ends
+
+.bank 0
+.slot 2
+.org $11F9
+.section "Load Combat Log text 3" overwrite
+
+	ld de, Key
+	call CombatLogText
+
+.ends
+
+.bank 1
+.slot 3
+.org $02CC
+.section "Load Combat Log text 4" overwrite
+
+	ld de, Spotted
+	call CombatLogText
+
+.ends
+
+.bank 1
+.slot 3
+.org $067B
+.section "Load Combat Log text 5" overwrite
+
+	ld de, Damage1
+	call CombatLogText
+
+.ends
+
+.bank 1
+.slot 3
+.org $1C38
+.section "Load Combat Log text 6" overwrite
+
+	ld de, Damage2
+	call CombatLogText
+
+.ends
+
+.bank 1
+.slot 3
+.org $1CAA
+.section "Load Combat Log text 7" overwrite
+
+	ld de, Damage3
+    call CombatLogText
 
 .ends
 
@@ -1062,6 +1145,24 @@ Done:   	text "Done\END"
 	
 .ends
 
+.section "Combat Log" overwrite
+
+Spotted:    text "SPOTTED \END"
+Damage1:    text "DAMAGE1\END"
+Damage2:    text "DAMAGE2\END"
+Damage3:    text "DAMAGE3\END"
+Potion:     text "POTION  USED\END"
+Item:       text "ITEM    USED\END"
+Key:        text "KEY USED\END"
+
+.ends
+
+.section "Combat Log Text Graphics" overwrite
+
+CombatLogTextGFX:   .INCBIN "title5.bin" READ 240
+
+.ends
+
 .section "New Writing routine" overwrite
 
 LABEL5080:
@@ -1239,6 +1340,132 @@ LABEL1DC98:
 	add hl, bc
 	ld bc, $0008
 	call $0056
+	ret
+
+.ends
+
+.section "New Combat Log text" overwrite
+
+LABEL3492:
+	push de
+	call LABEL350B
+	pop de
+    ld b, $08
+LABEL34A1:
+    ld a, (de)
+    cp $FF
+    ret z
+    cp $FE
+    ret z
+    push de
+    push bc
+    sub $20
+    srl a
+    ld c, $0F
+    jr c, LABEL34B4
+    ld c, $F0
+LABEL34B4:
+    add a, a
+    add a, a
+    add a, a
+    ld e, a
+    ld d, $00
+    ld hl, CombatLogTextGFX
+    add hl, de
+    ld b, $08
+    ld de, $D623
+LABEL34C3:
+    ld a, (hl)
+    and c
+    ld (de), a
+    inc hl
+    inc de
+    djnz LABEL34C3
+    ld a, c
+    and $01
+    ld e, a
+    pop bc
+    push bc
+    inc b
+    ld a, b
+    and $01
+    xor e
+    jr nz, LABEL34E7
+    ld hl, $D623
+    ld b, $08
+LABEL34DC:
+    rrc (hl)
+    rrc (hl)
+    rrc (hl)
+    rrc (hl)
+    inc hl
+    djnz LABEL34DC
+LABEL34E7:
+    ld b, $08
+    ld hl, ($D2A4)
+    ld de, $D623
+LABEL34EF:
+    call $004A
+    ld c, a
+    ld a, (de)
+    or c
+    call $004D
+    inc de
+    inc hl
+    djnz LABEL34EF
+    pop bc
+    bit 0, b
+    jr z, LABEL3504
+    ld ($D2A4), hl
+LABEL3504:
+    pop de
+    inc de
+    djnz LABEL34A1
+    jp LABEL3492
+
+LABEL350B:
+	ld a, ($D2A3)
+	add a, $04
+	cp $C2
+	jr c, LABEL3516
+	ld a, $AE
+LABEL3516:
+	ld hl, $1921
+	ld de, $001C
+	ld c, $05
+LABEL351E:
+	ld b, $04
+LABEL3520:
+	call $004D
+	inc hl
+	inc a
+	djnz LABEL3520
+	cp $C2
+	jr c, LABEL352D
+	ld a, $AE
+LABEL352D:
+	add hl, de
+	dec c
+	jr nz, LABEL351E
+	ld a, ($D2A3)
+	ld l, a
+	ld h, $00
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	ld bc, $0800
+	add hl, bc
+	ld ($D2A4), hl
+	ld bc, $0020
+	xor a
+	call $0056
+	ld a, ($D2A3)
+	add a, $04
+	cp $C2
+	jr c, LABEL3553
+	ld a, $AE
+LABEL3553:
+	ld ($D2A3), a
 	ret
 
 .ends
