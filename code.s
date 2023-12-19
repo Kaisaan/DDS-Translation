@@ -155,6 +155,8 @@
     ld de, $1000
     ld b, $F0
     call LoadText
+    ld hl, $1A44
+    ld b, $19
 
 .ends
 
@@ -167,6 +169,8 @@
     ld de, $1000
     ld b, $F0
     call LoadText
+    ld hl, $1A47
+    ld b, $13
 
 .ends
 
@@ -422,16 +426,16 @@ CombatLogText:
 .org $11D6
 .section "Light World names" overwrite
 
-    MalkuthL:   text "MALKUTH\END"
+    MalkuthL:   text "MALKHUT\END"
     YesodL:     text "YESOD\END"
     HodL:       text "HOD\END"
     NetzachL:   text "NETZACH\END"
-    TipheresL:  text "TIFERETH\END"
-    GeburahL:   text "GEBURAH\END"
+    TipheresL:  text "TIFERET\END"
+    GeburahL:   text "GEVURAH\END"
     ChesedL:    text "CHESED\END"
     BinahL:     text "BINAH\END"
     ChokmahL:   text "CHOKMAH\END"
-    KetherL:    text "KETHER\END"
+    KetherL:    text "KETER\END"
     DaathL:     text "DA'AT\END"
 
 .ends
@@ -442,25 +446,6 @@ CombatLogText:
 .section "Load HHC World names" overwrite
 
     .dw $FFFF, MalkuthH, YesodH, HodH, NetzachH, TipheresH, GeburahH, ChesedH, BinahH, ChokmahH, KetherH, DaathH
-
-.ends
-
-.bank 13
-.slot 5
-.org $14CE
-.section "Dark World names" overwrite
-
-    MalkuthD:   text "MALKUTH\END"
-    YesodD:     text "YESOD\END"
-    HodD:       text "HOD\END"
-    NetzachD:   text "NETZACH\END"
-    TipheresD:  text "TIFERETH\END"
-    GeburahD:   text "GEBURAH\END"
-    ChesedD:    text "CHESED\END"
-    BinahD:     text "BINAH\END"
-    ChokmahD:   text "CHOKMAH\END"
-    KetherD:    text "KETHER\END"
-    DaathD:     text "DA'AT\END"
 
 .ends
 
@@ -601,12 +586,10 @@ MapText:    text "From    to   \END"
 
 .ends
 
-
-
 .bank 0
 .slot 2
 .org $11B8
-.section "Load Combat Log text 1" overwrite
+.section "Load Potion Text 1" overwrite
 
 	ld de, Potion
 	call CombatLogText
@@ -616,7 +599,47 @@ MapText:    text "From    to   \END"
 .bank 0
 .slot 2
 .org $11CF
-.section "Load Combat Log text 2" overwrite
+.section "Load Potion Text 2" overwrite
+
+	ld de, Potion
+	call CombatLogText
+
+.ends
+
+.bank 0
+.slot 2
+.org $11F9
+.section "Load Potion Text 3" overwrite
+
+	ld de, Potion
+	call CombatLogText
+
+.ends
+
+.bank 0
+.slot 2
+.org $128A
+.section "Load Key Text 1" overwrite
+
+	ld de, Key
+	call CombatLogText
+
+.ends
+
+.bank 0
+.slot 2
+.org $133A
+.section "Load Key Text 2" overwrite
+
+	ld de, Key
+	call CombatLogText
+
+.ends
+
+.bank 0
+.slot 2
+.org $1244
+.section "Load Item Text 1" overwrite
 
 	ld de, Item
 	call CombatLogText
@@ -625,10 +648,10 @@ MapText:    text "From    to   \END"
 
 .bank 0
 .slot 2
-.org $11F9
-.section "Load Combat Log text 3" overwrite
+.org $13BD
+.section "Load Item Text 2" overwrite
 
-	ld de, Key
+	ld de, Item
 	call CombatLogText
 
 .ends
@@ -636,7 +659,7 @@ MapText:    text "From    to   \END"
 .bank 1
 .slot 3
 .org $02CC
-.section "Load Combat Log text 4" overwrite
+.section "Load Spotted Text" overwrite
 
 	ld de, Spotted
 	call CombatLogText
@@ -646,9 +669,9 @@ MapText:    text "From    to   \END"
 .bank 1
 .slot 3
 .org $067B
-.section "Load Combat Log text 5" overwrite
+.section "Load Damage Text 1" overwrite
 
-	ld de, Damage1
+	ld de, Damage
 	call CombatLogText
 
 .ends
@@ -656,9 +679,9 @@ MapText:    text "From    to   \END"
 .bank 1
 .slot 3
 .org $1C38
-.section "Load Combat Log text 6" overwrite
+.section "Load Damage Text 2" overwrite
 
-	ld de, Damage2
+	ld de, Damage
 	call CombatLogText
 
 .ends
@@ -666,9 +689,9 @@ MapText:    text "From    to   \END"
 .bank 1
 .slot 3
 .org $1CAA
-.section "Load Combat Log text 7" overwrite
+.section "Load Damage Text 3" overwrite
 
-	ld de, Damage3
+	ld de, Damage
     call CombatLogText
 
 .ends
@@ -701,17 +724,17 @@ MapText:    text "From    to   \END"
 
 .section "HHC World names" overwrite
 
-    MalkuthH:   text "MALKUTH\END"
+    MalkuthH:   text "MALKHUT\END"
     YesodH:     text "YESOD\END"
     HodH:       text "HOD\END"
     NetzachH:   text "NETZACH\END"
-    TipheresH:  text "TIPHERETH\END"
-    GeburahH:   text "GEBURAH\END"
+    TipheresH:  text "TIFERET\END"
+    GeburahH:   text "GEVURAH\END"
     ChesedH:    text "CHESED\END"
     BinahH:     text "BINAH\END"
     ChokmahH:   text "CHOKMAH\END"
-    KetherH:    text "KETHER\END"
-    DaathH:     text "DAAT\END"
+    KetherH:    text "KETER\END"
+    DaathH:     text "DA'AT\END"
 
 .ends
 
@@ -1148,9 +1171,7 @@ Done:   	text "Done\END"
 .section "Combat Log" overwrite
 
 Spotted:    text "SPOTTED \END"
-Damage1:    text "DAMAGE1\END"
-Damage2:    text "DAMAGE2\END"
-Damage3:    text "DAMAGE3\END"
+Damage:     text "DAMAGE\END"
 Potion:     text "POTION  USED\END"
 Item:       text "ITEM    USED\END"
 Key:        text "KEY USED\END"
