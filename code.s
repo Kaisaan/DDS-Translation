@@ -656,6 +656,16 @@ MapText:    text "From    to   \END"
 
 .ends
 
+.bank 0
+.slot 2
+.org $13DD
+.section "Load Item Text 3" overwrite
+
+	ld de, Item
+	call CombatLogText
+
+.ends
+
 .bank 1
 .slot 3
 .org $02CC
@@ -742,10 +752,10 @@ MapText:    text "From    to   \END"
 
 Cutscene1:
 
-	text "\"Hinokagutsuchi!\" The power of  "
-    text "the divine sword received from  "
-    text "Izanami tears apart demonic     "
-    text "force.\END"
+	text " \"Hinokagutsuchi!\" The power of "
+    text " the divine sword received from "
+    text "  Izanami tears apart demonic   "
+    text "             force.\END"
 
 .ends
 
@@ -753,9 +763,9 @@ Cutscene1:
 
 Cutscene2:
 
-    text "Master Loki has been defeated by"
-    text "the likes of you? You and       "
-    text "Yumiko will be demon food!\END"
+    text "  Master Loki has been defeated "
+    text "  by the likes of you? You and  "
+    text "   Yumiko will be demon food!\END"
 
 .ends
 
@@ -763,11 +773,11 @@ Cutscene2:
 
 Cutscene3:
 
-    text "To cross the world connecting   "
-    text "the good and evil of the Demon  "
-    text "World, you will require the     "
-    text "power of a demon-beast.         "
-    text "Run, Cerberus!\END"
+    text " To cross the world connecting  "
+    text " the good and evil of the Demon "
+    text "  World, you will require the   "
+    text "    power of a demon-beast.     "
+    text "         Run, Cerberus!\END"
 
 .ends
 
@@ -775,9 +785,9 @@ Cutscene3:
 
 Cutscene4:
 
-    text "The Demon World's assaults are  "
-    text "endless! Will Nakajima be able  " 
-    text "to save Yumiko?\END"
+    text " The Demon World's assaults are "
+    text " endless! Will Nakajima be able " 
+    text "        to save Yumiko?\END"
 
 .ends
 
@@ -786,8 +796,8 @@ Cutscene4:
 
 Cutscene5:
 
-    text "\"Akemi, I'm entrusting my       "
-    text "message to this doll.\"\END"
+    text "   \"Akemi, I'm entrusting my    "
+    text "     message to this doll.\"\END"
 
 .ends
 
@@ -795,11 +805,11 @@ Cutscene5:
 
 Cutscene6:
 
-    text "\"Impressive, to end up all the  "
-    text "way here, but your life shall   "
-    text "end here as well.\"              "
-    text "The Demon Lord Set's voice      "
-    text "echoes in the darkness.\END"    
+    text " \"Impressive, to end up all the "
+    text " way here, but your life shall  "
+    text "       end here as well.\"       "
+    text "   The Demon Lord Set's voice   "
+    text "    echoes in the darkness.\END"    
 
 .ends
 
