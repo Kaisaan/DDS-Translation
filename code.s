@@ -146,6 +146,15 @@
 
 .ends
 
+.bank 2
+.slot 4
+.org $1A45
+.section "Cutscene 7 load text" overwrite
+
+    .dw Cutscene7
+
+.ends
+
 .bank 0
 .slot 2
 .org $0811
@@ -391,6 +400,8 @@ CombatLogText:
 	call CenterText
 
 .ends
+
+
 
 .bank 13
 .slot 5
@@ -833,9 +844,10 @@ Cutscene1:
 
 Cutscene2:
 
-    text "  Master Loki has been defeated "
-    text "  by the likes of you? You and  "
-    text "   Yumiko will be demon food!\END"
+    text "You think that Master Loki could"
+    text "be defeated by the likes of you?"
+    text "      You and Yumiko will       "
+    text "         be demon food!\END"
 
 .ends
 
@@ -880,6 +892,18 @@ Cutscene6:
     text "       end here as well.\"       "
     text "   The Demon Lord Set's voice   "
     text "    echoes in the darkness.\END"    
+
+.ends
+
+.section "Cutscene 7 text" overwrite
+
+Cutscene7:
+
+    text "Thank you for\\n"
+    text "saving me, Akemi.\\n"
+    text "Here, Set was\\n"
+    text "keeping this\\n"
+    text "key safe.\END"
 
 .ends
 
