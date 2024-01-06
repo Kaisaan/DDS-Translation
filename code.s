@@ -638,7 +638,7 @@ MapText:    text "From    to   \END"
 
 .bank 0
 .slot 2
-.org $1244
+.org $1212
 .section "Load Item Text 1" overwrite
 
 	ld de, Item
@@ -648,7 +648,7 @@ MapText:    text "From    to   \END"
 
 .bank 0
 .slot 2
-.org $13BD
+.org $1244
 .section "Load Item Text 2" overwrite
 
 	ld de, Item
@@ -658,8 +658,78 @@ MapText:    text "From    to   \END"
 
 .bank 0
 .slot 2
-.org $13DD
+.org $1325
 .section "Load Item Text 3" overwrite
+
+	ld de, Item
+	call CombatLogText
+
+.ends
+
+.bank 0
+.slot 2
+.org $1353
+.section "Load Item Text 4" overwrite
+
+	ld de, Item
+	call CombatLogText
+
+.ends
+
+.bank 0
+.slot 2
+.org $1373
+.section "Load Item Text 5" overwrite
+
+	ld de, Item
+	call CombatLogText
+
+.ends
+
+.bank 0
+.slot 2
+.org $13BD
+.section "Load Item Text 6" overwrite
+
+	ld de, Item
+	call CombatLogText
+
+.ends
+
+.bank 0
+.slot 2
+.org $13DD
+.section "Load Item Text 7" overwrite
+
+	ld de, Item
+	call CombatLogText
+
+.ends
+
+.bank 0
+.slot 2
+.org $1399
+.section "Load Item Text 8" overwrite
+
+	ld de, Item
+	call CombatLogText
+
+.ends
+
+.bank 0
+.slot 2
+.org $13F6
+.section "Load Item Text 9" overwrite
+
+	ld de, Item
+	call CombatLogText
+
+.ends
+
+.bank 0
+.slot 2
+.org $141B
+.section "Load Item Text 10" overwrite
 
 	ld de, Item
 	call CombatLogText
