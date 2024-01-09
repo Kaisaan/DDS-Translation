@@ -6,9 +6,9 @@
     slot 2 $4000
     slot 3 $6000
     slot 4 $8000
-    slot 5 $a000
-    slot 6 $c000
-    slot 7 $e000
+    slot 5 $A000
+    slot 6 $C000
+    slot 7 $E000
 .endme
 
 .rombanksize $2000
