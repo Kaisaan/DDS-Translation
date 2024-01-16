@@ -401,8 +401,6 @@ CombatLogText:
 
 .ends
 
-
-
 .bank 13
 .slot 5
 .org $151B
@@ -899,10 +897,10 @@ Cutscene6:
 
 Cutscene7:
 
-    text "Thank you for\\n"
-    text "saving me, Akemi.\\n"
-    text "Here, Set was\\n"
-    text "keeping this\\n"
+    text "Thank you for\n"
+    text "saving me, Akemi.\n"
+    text "Here, Set was\n"
+    text "keeping this\n"
     text "key safe.\END"
 
 .ends
@@ -911,7 +909,7 @@ Cutscene7:
 	
 Izanami1:
 
-	text "Quickly, find your\\n"
+	text "Quickly, find your\n"
     text "servant Cerberus.\END"
 
 .ends
@@ -920,9 +918,9 @@ Izanami1:
 
 Izanami2:
 
-	text "There is no\\n"
-    text "going back,\\n"
-    text "once you set foot\\n"
+	text "There is no\n"
+    text "going back,\n"
+    text "once you set foot\n"
     text "in the Demon World.\END"
 
 .ends
@@ -931,8 +929,8 @@ Izanami2:
 
 Izanami3:
 
-	text "As the moon waxes,\\n"
-    text "a \"demon\" starts\\n"
+	text "As the moon waxes,\n"
+    text "a \"demon\" starts\n"
     text "to move.\END"
 
 .ends
@@ -941,7 +939,7 @@ Izanami3:
 
 Izanami4:
 
-	text "The greedy wants to\\n"
+	text "The greedy wants to\n"
     text "devour the poor.\END"
 
 
@@ -951,9 +949,9 @@ Izanami4:
 
 Izanami5:
 
-	text "The good and evil of\\n"
-    text "the Demon World are\\n"
-    text "at balance within\\n"
+	text "The good and evil of\n"
+    text "the Demon World are\n"
+    text "at balance within\n"
     text "a dark world.\END"
 	
 .ends
@@ -962,8 +960,8 @@ Izanami5:
 	
 Izanami6:
 
-	text "Treat Cerberus well.\\n" 
-    text "He has sworn to you\\n"
+	text "Treat Cerberus well.\n" 
+    text "He has sworn to you\n"
     text "eternal loyalty.\END"
 
 .ends
@@ -972,7 +970,7 @@ Izanami6:
 
 Izanami7:
 
-    text "Take Yumiko and come\\n"
+    text "Take Yumiko and come\n"
     text "see me quickly...\END"
 
 .ends
@@ -981,8 +979,8 @@ Izanami7:
 
 Izanami8:
 
-    text "Shikome is\\n"
-    text "enthralled by\\n"
+    text "Shikome is\n"
+    text "enthralled by\n"
     text "the serene smell.\END"
 
 .ends
@@ -991,8 +989,8 @@ Izanami8:
 
 Izanami9:
 
-    text "The flowing sand\\n"
-    text "fills the demonic\\n"
+    text "The flowing sand\n"
+    text "fills the demonic\n"
     text "hourglass.\END"
 
 .ends
@@ -1001,9 +999,9 @@ Izanami9:
 
 Izanami10:
 
-    text "May your life shine\\n"
-    text "when you wish upon\\n"
-    text "the Philosopher's\\n"
+    text "May your life shine\n"
+    text "when you wish upon\n"
+    text "the Philosopher's\n"
     text "Stone...\END"
 
 .ends
@@ -1012,9 +1010,9 @@ Izanami10:
 
 Izanami11:
 
-    text "Within darkness,\\n"
-    text "good and evil\\n"
-    text "become the sides\\n"
+    text "Within darkness,\n"
+    text "good and evil\n"
+    text "become the sides\n"
     text "of a mirror.\END"
 
 .ends
@@ -1023,9 +1021,9 @@ Izanami11:
 
 Izanami12:
 
-    text "You may enter the\\n"
-    text "dark mage's garden\\n"
-    text "with a holy\\n"
+    text "You may enter the\n"
+    text "dark mage's garden\n"
+    text "with a holy\n"
     text "talisman.\END"
 
 .ends
@@ -1034,8 +1032,8 @@ Izanami12:
 
 Izanami13:
 
-    text "The lion-demon\\n"
-    text "eats the bones as\\n"
+    text "The lion-demon\n"
+    text "eats the bones as\n"
     text "it bids its time.\END"
 
 .ends
@@ -1044,10 +1042,10 @@ Izanami13:
 
 Izanami14:
 
-    text "A four-legged beast\\n"
-    text "runs through the\\n"
-    text "frozen darkness\\n"
-    text "not unlike a\\n"
+    text "A four-legged beast\n"
+    text "runs through the\n"
+    text "frozen darkness\n"
+    text "not unlike a\n"
     text "strong gale.\END"
 
 .ends
@@ -1056,8 +1054,8 @@ Izanami14:
 
 Izanami15:
 
-    text "In the farthest\\n"
-    text "place, by the\\n"
+    text "In the farthest\n"
+    text "place, by the\n"
     text "great gate, I await.\END"
 
 
@@ -1067,9 +1065,9 @@ Izanami15:
 
 Izanami16:
 
-    text "Yomotsu-Shikome is\\n"
-    text "my servant, and she\\n"
-    text "can be protective\\n"
+    text "Yomotsu-Shikome is\n"
+    text "my servant, and she\n"
+    text "can be protective\n"
     text "to a fault.\END"
 
 .ends
@@ -1078,8 +1076,8 @@ Izanami16:
 
 Yumiko1:
 
-    text "\"This world lies on\\n" 
-    text "the Demon World's\\n" 
+    text "\"This world lies on\n" 
+    text "the Demon World's\n" 
     text "obverse. I'm-\"\END"
 
 .ends
@@ -1088,9 +1086,9 @@ Yumiko1:
 
 Yumiko2:
 
-    text "\"Akemi, you won't\\n"
-    text "abandon me like you\\n"
-    text "did to Izanami,\\n"
+    text "\"Akemi, you won't\n"
+    text "abandon me like you\n"
+    text "did to Izanami,\n"
     text "will you?\"\END"
 
 .ends
@@ -1099,9 +1097,9 @@ Yumiko2:
 
 Yumiko3:
 
-    text "\"Izanami wants me,\\n" 
-    text "to be reunited with\\n"
-    text "Izanagi's\\n"
+    text "\"Izanami wants me,\n" 
+    text "to be reunited with\n"
+    text "Izanagi's\n"
     text "reincarnation--you.\"\\END" 
 
 .ends
@@ -1110,10 +1108,10 @@ Yumiko3:
 
 Yumiko4:
 
-    text "\"Don't let your\\n"
-    text "guard down!\\n"
-    text "Ms. Ohara is being\\n" 
-    text "controlled by\\n"
+    text "\"Don't let your\n"
+    text "guard down!\n"
+    text "Ms. Ohara is being\n" 
+    text "controlled by\n"
     text "Loki's magic!\"\END"
 
 .ends
@@ -1122,9 +1120,9 @@ Yumiko4:
 
 Yumiko5:
 
-    text "\"Poor Ms. Ohara,\\n"
-    text "she's in love with\\n"
-    text "Loki. Akemi, please\\n"
+    text "\"Poor Ms. Ohara,\n"
+    text "she's in love with\n"
+    text "Loki. Akemi, please\n"
     text "help her...\"\END"
 
 .ends
@@ -1133,9 +1131,9 @@ Yumiko5:
 
 Yumiko6:
 
-    text "\"If you defeat Loki,\\n"
-    text "she's sure to get\\n"
-    text "angry and\\n"
+    text "\"If you defeat Loki,\n"
+    text "she's sure to get\n"
+    text "angry and\n"
     text "attack you.\"\END"
 
 .ends
@@ -1144,8 +1142,8 @@ Yumiko6:
 
 Yumiko7:
 
-    text "\"Hidden things are\\n" 
-    text "revealed by\\n"
+    text "\"Hidden things are\n" 
+    text "revealed by\n"
     text "the moonlight.\"\END"
 
 .ends
@@ -1154,8 +1152,8 @@ Yumiko7:
 
 Yumiko8:
 
-    text "\"A wandering soul\\n" 
-    text "is in possession\\n"
+    text "\"A wandering soul\n" 
+    text "is in possession\n"
     text "of a shining stone.\"\END"
 
 .ends
@@ -1164,11 +1162,11 @@ Yumiko8:
 
 Yumiko9:
 
-    text "\"In the future,\\n"
-    text "where the Demon\\n"
-    text "Lords lie\\n"
-    text "vanquished, the\\n"
-    text "Sun's shield\\n"
+    text "\"In the future,\n"
+    text "where the Demon\n"
+    text "Lords lie\n"
+    text "vanquished, the\n"
+    text "Sun's shield\n"
     text "shines brightly.\"\END"
 
 .ends
@@ -1177,8 +1175,8 @@ Yumiko9:
 
 Yumiko10:
 
-    text "\"It hurts so much...\\n"
-    text "Akemi, I think\\n"
+    text "\"It hurts so much...\n"
+    text "Akemi, I think\n"
     text "I'm done for...\"\END"
 
 .ends
@@ -1187,9 +1185,9 @@ Yumiko10:
 
 Yumiko11:
 
-    text "\"I don't know where\\n"
-    text "I am... but the\\n"
-    text "place I'm trapped in\\n" 
+    text "\"I don't know where\n"
+    text "I am... but the\n"
+    text "place I'm trapped in\n" 
     text "is dark and warm.\"\END"
 
 .ends
@@ -1198,8 +1196,8 @@ Yumiko11:
 
 Yumiko12:
 
-    text "\"Akemi, help!\\n"
-    text "Loki...\\n"
+    text "\"Akemi, help!\n"
+    text "Loki...\n"
     text "right here...\"\END"
 
 .ends
@@ -1208,8 +1206,8 @@ Yumiko12:
 
 Yumiko13:
 
-    text "\"You must seal the\\n"
-    text "magic that grants\\n"
+    text "\"You must seal the\n"
+    text "magic that grants\n"
     text "Loki's immortality\"\END"
 
 .ends
@@ -1218,9 +1216,9 @@ Yumiko13:
 
 Yumiko14:
 
-    text "\"Flowing silver will\\n"
-    text "make the deluded\\n"
-    text "woman come back\\n"
+    text "\"Flowing silver will\n"
+    text "make the deluded\n"
+    text "woman come back\n"
     text "to her senses.\"\END"
 
 .ends
@@ -1229,9 +1227,9 @@ Yumiko14:
 
 Yumiko15:
 
-    text "\"I am... by a\\n"
-    text "power... even\\n"
-    text "stronger than\\n"
+    text "\"I am... by a\n"
+    text "power... even\n"
+    text "stronger than\n"
     text "Loki's...\"\END"
 
 .ends
@@ -1240,8 +1238,8 @@ Yumiko15:
 
 Yumiko16:
 
-    text "\"An ancient item\\n" 
-    text "will seal the\\n"
+    text "\"An ancient item\n" 
+    text "will seal the\n"
     text "Demon Lord's power.\"\END"
 
 .ends
@@ -1275,7 +1273,7 @@ Done:   	text "Done\END"
 .section "Combat Log" overwrite
 
 Spotted:    text "SPOTTED \END"
-Damage:     text "DAMAGE\END"
+Damage:     text "DAMAGED\END"
 Potion:     text "POTION  USED\END"
 Item:       text "ITEM    USED\END"
 Key:        text "KEY USED\END"
