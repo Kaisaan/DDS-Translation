@@ -45,7 +45,7 @@ You can contact me on Discord with the username `kaisaan` or you can join the [C
 **agarpac** - Other Graphics<br>
 **Sugunii** - Special Thanks<br>
 <br>
-**Supporters** - comrade_hee_ho, seatsafteyswitch, eiowlta, quantumdog, reachforthemoon, naoyatoudou, Scone#6977, amazingcretin, alison1337, liamcarney, theoomslayer, boimses, hiking., xzippyzachx, yoush03, lorenzoiscool, Honse, Zooperwoop, Bluerose32, katorishintaro, jonkerkujo, kularian<br>
+**Supporters** - comrade_hee_ho, seatsafteyswitch, eiowlta, quantumdog, reachforthemoon, naoyatoudou, Scone#6977, amazingcretin, alison1337, liamcarney, theoomslayer, boimses, hiking., xzippyzachx, yoush03, lorenzoiscool, Honse, Zooperwoop, Bluerose32, katorishintaro, jonkerkujo, kularian, felipe1020, cookiestew<br>
 <br>
 [MarshSMT](https://www.youtube.com/@MarshSMT) - The only other relatively comprehensive [English video](https://youtu.be/VO38bSyEQYk) of the game<br>
 [DDS Library](http://ddslib.html.xdomain.jp/index.html) - Having maps and info on the non-MSX releases of the game<br>
@@ -55,7 +55,7 @@ fm-7.com - Having a [page for this game](https://fm-7.com/museum/products/dv2o83
 necretro.org - Having a [scan of the manual](https://necretro.org/File:Digital_Devil_Story_Megami_Tensei_PC88_Manual.pdf)<br>
 <br>
 [Classic Persona Modding](https://discord.gg/ahg9gegCcm) - Where I'm able to post progress<br>
-[Romhacking.net](https://discord.gg/uAufcgz) - Where I got a lot of hacking help<br>
+[Romhacking.net](https://discord.gg/uAufcgz) - Where I got a lot of hacking help and advice<br>
 [PC-9800 Series Central](http://discord.gg/j2ns7UQ) - Advice on working with real hardware<br>
 [SMT Modding Discord](https://discord.gg/9JGwcwMEkF) - Extra support<br>
 GDYU - Moral Support<br>
