@@ -28,7 +28,7 @@ Twitter/X: @KaisaanSiddiqui
 Reddit: u/kaisaans
 You can also talk about this game in the #telenet-megaten-translation channel in the Classic Persona Modding Discord (https://discord.gg/ahg9gegCcm).
 
-Credits: (If I missed your name, want to be creditted under a different name, or want me to link to something else, please let me know)
+Hacking Credits: (If I missed your name, want to be creditted under a different name, or want me to link to something else, please let me know)
 Gabriulio - Initial Translation
 MKCA - Translation, Testing, Giving lots of Advice
 Leina - Lots of Hacking help
@@ -40,8 +40,9 @@ Z64Gaming - Title Screen Graphics
 agarpac - Other Graphics
 Sugunii - Special Thanks
 
-Supporters - comrade_hee_ho, seatsafteyswitch, eiowlta, quantumdog, reachforthemoon, naoyatoudou, Scone#6977, amazingcretin, alison1337, liamcarney, theoomslayer, boimses, hiking., xzippyzachx, yoush03, lorenzoiscool, Honse, Zooperwoop, Bluerose32, katorishintaro, jonkerkujo, kularian, felipe1020, cookiestew
+Supporters: comrade_hee_ho, seatsafteyswitch, eiowlta, quantumdog, reachforthemoon, naoyatoudou, Scone#6977, amazingcretin, alison1337, liamcarney, theoomslayer, boimses, hiking., xzippyzachx, yoush03, lorenzoiscool, Honse, Zooperwoop, Bluerose32, katorishintaro, jonkerkujo, kularian, felipe1020, cookiestew
 
+Specific people and resources:
 MarshSMT - The only other relatively comprehensive English video of the game
 DDS Library - Having maps and info on the non-MSX releases of the game
 Natreg - Comprehensive Reddit post of FM-7 version
@@ -49,6 +50,7 @@ ReyVGM & real_mukimuki - Contributing to this game's cheats page on GameFAQs
 fm-7.com - Having a page for this game with useful info
 necretro.org - Having a scan of the manual
 
+Discord Servers that helped:
 Classic Persona Modding - Where I'm able to post progress
 Romhacking.net - Where I got a lot of hacking help and advice
 PC-9800 Series Central - Advice on working with real hardware

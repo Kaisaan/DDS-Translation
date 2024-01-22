@@ -3,12 +3,15 @@ Stuff for translating and further demystifying *Digital Devil Story - Reincarnat
 I have a page about the game and its other versions on [my website](https://kaisaan.github.io/pages/dds.html) but it's still a work in progress.
 <br>Another, much more detailed, place to learn more about the game is [this reddit post](https://old.reddit.com/r/Megaten/comments/15zdfwp/digital_devil_story_megami_tensei_telenet_version/) by Natreg.
 
-# How it Works
-The game loads the character graphics from the BIOS of the MSX. English letters are always going to be included of the BIOS regardless of the region, so I'm just able to change the value in the text data.  
-Because the English text is going to be larger than the space allotted for the original Japanese text, I expanded the ROM by one bank (from 128kb to 134kb) and just change banks as needed.
+# Releases
+The latest official release can be found at [romhacking.net](https://www.romhacking.net/translations/7180/) and in the [releases](https://github.com/Kaisaan/DDS-Translation/releases) page.
 
 # Progress
 The MSX version is now fully translated. All that is left is for the manual to be translated and preferably rescanned.
+
+# How it Works
+The game loads the character graphics from the BIOS of the MSX. English letters are always going to be included of the BIOS regardless of the region, so I'm just able to change the value in the text data.  
+Because the English text is going to be larger than the space allotted for the original Japanese text, I expanded the ROM by one bank (from 128kb to 134kb) and just change banks as needed.
 
 # Building
 Have [wla-dx](https://github.com/vhelin/wla-dx) installed and have the game's ROM as `Digital Devil Story.rom`. Then run `make` and it will result in the new `DDSE.rom` file.
@@ -35,7 +38,7 @@ You can contact me on Discord with the username `kaisaan` or you can join the [C
 
 # Credits
 **Gabriulio** - Initial Translation<br>
-**MKCA** - Translation, Testing, Giving lots of Advice<br>
+**[MKCA](https://github.com/MKCAMK)** - Translation, Testing, Giving lots of Advice<br>
 **Leina** - Lots of Hacking help<br>
 **Calindro** - Hacking and Debugging help, also creator of Emulicious<br>
 **abridgewater** - Hacking and Japanese help<br>
@@ -43,10 +46,12 @@ You can contact me on Discord with the username `kaisaan` or you can join the [C
 **Zarby89** - Extra table file help<br>
 **Z64Gaming** - Title Screen Graphics<br>
 **agarpac** - Other Graphics<br>
+**NightScript** - Sephiroth spelling advice<br>
 **Sugunii** - Special Thanks<br>
 <br>
 **Supporters** - comrade_hee_ho, seatsafteyswitch, eiowlta, quantumdog, reachforthemoon, naoyatoudou, Scone#6977, amazingcretin, alison1337, liamcarney, theoomslayer, boimses, hiking., xzippyzachx, yoush03, lorenzoiscool, Honse, Zooperwoop, Bluerose32, katorishintaro, jonkerkujo, kularian, felipe1020, cookiestew<br>
 <br>
+Specific people and resources:<br>
 [MarshSMT](https://www.youtube.com/@MarshSMT) - The only other relatively comprehensive [English video](https://youtu.be/VO38bSyEQYk) of the game<br>
 [DDS Library](http://ddslib.html.xdomain.jp/index.html) - Having maps and info on the non-MSX releases of the game<br>
 Natreg - Comprehensive [Reddit post](https://old.reddit.com/r/Megaten/comments/15zdfwp/digital_devil_story_megami_tensei_telenet_version/) of FM-7 version<br>
@@ -54,6 +59,7 @@ ReyVGM & real_mukimuki - Contributing to this game's [cheats page on GameFAQs](h
 fm-7.com - Having a [page for this game](https://fm-7.com/museum/products/dv2o83gp/) with useful info<br>
 necretro.org - Having a [scan of the manual](https://necretro.org/File:Digital_Devil_Story_Megami_Tensei_PC88_Manual.pdf)<br>
 <br>
+Discord Servers that helped:<br>
 [Classic Persona Modding](https://discord.gg/ahg9gegCcm) - Where I'm able to post progress<br>
 [Romhacking.net](https://discord.gg/uAufcgz) - Where I got a lot of hacking help and advice<br>
 [PC-9800 Series Central](http://discord.gg/j2ns7UQ) - Advice on working with real hardware<br>
